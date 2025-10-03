@@ -315,67 +315,275 @@ p {
 /* =========================
    Hero Section
 ========================= */
-.hero {
+/* =========================
+   Hero Section - Animated
+========================= */
+.hero-animated {
     position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #2c3e50 100%);
     overflow: hidden;
+    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
 }
 
-.hero::before {
-    content: '';
+.hero-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
-    animation: heroZoom 20s ease-in-out infinite alternate;
+    background: radial-gradient(circle at center, rgba(212, 165, 116, 0.1) 0%, transparent 70%);
 }
 
-@keyframes heroZoom {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-.hero-overlay {
+/* Flying Products Container */
+.flying-products {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, transparent 0%, rgba(26, 35, 50, 0.4) 100%);
+    z-index: 1;
 }
 
-.hero-content {
-    position: relative;
+/* Flour Package Center */
+.flour-package {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
     z-index: 2;
+    animation: floatCenter 6s ease-in-out infinite;
+}
+
+.flour-package img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+.flour-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 165, 116, 0.3) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes floatCenter {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* Flying Items */
+.flying-item {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.flying-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+/* Individual Flying Animations */
+.bread-1 {
+    top: 15%;
+    left: 20%;
+    animation: flyOut1 2s ease-out 0.5s forwards, float 4s ease-in-out 2.5s infinite;
+}
+
+.bread-2 {
+    top: 25%;
+    right: 15%;
+    animation: flyOut2 2s ease-out 0.7s forwards, float 4s ease-in-out 2.7s infinite;
+}
+
+.pastry-1 {
+    top: 60%;
+    left: 15%;
+    animation: flyOut3 2s ease-out 0.9s forwards, float 4s ease-in-out 2.9s infinite;
+}
+
+.pastry-2 {
+    top: 65%;
+    right: 20%;
+    animation: flyOut4 2s ease-out 1.1s forwards, float 4s ease-in-out 3.1s infinite;
+}
+
+.croissant {
+    top: 40%;
+    left: 10%;
+    animation: flyOut5 2s ease-out 1.3s forwards, float 4s ease-in-out 3.3s infinite;
+}
+
+.donut {
+    top: 35%;
+    right: 8%;
+    animation: flyOut6 2s ease-out 1.5s forwards, float 4s ease-in-out 3.5s infinite;
+}
+
+.baguette {
+    top: 80%;
+    left: 25%;
+    animation: flyOut7 2s ease-out 1.7s forwards, float 4s ease-in-out 3.7s infinite;
+}
+
+.wheat-1 {
+    top: 75%;
+    right: 30%;
+    animation: flyOut8 2s ease-out 1.9s forwards, float 4s ease-in-out 3.9s infinite;
+}
+
+/* Fly Out Animations */
+@keyframes flyOut1 {
+    from {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-100px, -80px) scale(1) rotate(-15deg);
+    }
+}
+
+@keyframes flyOut2 {
+    from {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: translate(100px, -60px) scale(1) rotate(15deg);
+    }
+}
+
+@keyframes flyOut3 {
+    from {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-80px, 40px) scale(1) rotate(-20deg);
+    }
+}
+
+@keyframes flyOut4 {
+    from {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: translate(120px, 50px) scale(1) rotate(25deg);
+    }
+}
+
+@keyframes flyOut5 {
+    from {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-120px, -20px) scale(1) rotate(-10deg);
+    }
+}
+
+@keyframes flyOut6 {
+    from {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: translate(140px, -30px) scale(1) rotate(20deg);
+    }
+}
+
+@keyframes flyOut7 {
+    from {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-60px, 70px) scale(1) rotate(-25deg);
+    }
+}
+
+@keyframes flyOut8 {
+    from {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: translate(80px, 60px) scale(1) rotate(10deg);
+    }
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(var(--rotate));
+    }
+    50% {
+        transform: translateY(-20px) rotate(var(--rotate));
+    }
+}
+
+/* Hero Content */
+.hero-content-animated {
+    position: relative;
+    z-index: 10;
     text-align: center;
     color: var(--white);
+    padding: 0 20px;
 }
 
-.hero-content h1 {
+.hero-content-animated h1 {
     color: var(--white);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
-.hero-content p {
+.hero-content-animated p {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: 2.5rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-buttons {
@@ -396,6 +604,7 @@ p {
     gap: 10px;
     color: var(--white);
     font-size: 0.875rem;
+    z-index: 10;
     animation: scrollBounce 2s ease-in-out infinite;
 }
 
@@ -414,6 +623,26 @@ p {
     background: linear-gradient(to bottom, var(--white), transparent);
 }
 
+/* Responsive */
+@media (max-width: 968px) {
+    .flour-package {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .flying-item {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .hero-content-animated h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content-animated p {
+        font-size: 1rem;
+    }
+}
 /* =========================
    Image Wrapper
 ========================= */

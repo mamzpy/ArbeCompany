@@ -1,0 +1,84 @@
+# Query: LOGO
+# ContextLines: 1
+
+36 results - 6 files
+
+about.html:
+   23              <div class="nav-content">
+   24:                 <div class="logo">
+   25:                     <img src="images/LOGO.png" alt="ARBE Logo">
+   26                      <span>آربه</span>
+
+  327                  <div class="footer-col">
+  328:                     <div class="footer-logo">
+  329:                         <img src="images/LOGO.png" alt="ARBE Logo">
+  330                          <h3>آربه</h3>
+
+contact.html:
+   23              <div class="nav-content">
+   24:                 <div class="logo">
+   25:                     <img src="images/LOGO.png" alt="ARBE Logo">
+   26                      <span>آربه</span>
+
+  250                  <div class="footer-col">
+  251:                     <div class="footer-logo">
+  252:                         <img src="images/LOGO.png" alt="ARBE Logo">
+  253                          <h3>آربه</h3>
+
+index.html:
+   23              <div class="nav-content">
+   24:                 <div class="logo">
+   25:                     <img src="images/LOGO.png" alt="ARBE Logo">
+   26                      <span>آربه</span>
+
+  308                  <div class="footer-col">
+  309:                     <div class="footer-logo">
+  310:                         <img src="images/LOGO.png" alt="ARBE Logo">
+  311                          <h3>آربه</h3>
+
+laboratory.html:
+   23              <div class="nav-content">
+   24:                 <div class="logo">
+   25:                     <img src="images/LOGO.png" alt="ARBE Logo">
+   26                      <span>آربه</span>
+
+  416                  <div class="footer-col">
+  417:                     <div class="footer-logo">
+  418:                         <img src="images/LOGO.png" alt="ARBE Logo">
+  419                          <h3>آربه</h3>
+
+product.html:
+   23              <div class="nav-content">
+   24:                 <div class="logo">
+   25:                     <img src="images/LOGO.png" alt="ARBE Logo">
+   26                      <span>آربه</span>
+
+  399                  <div class="footer-col">
+  400:                     <div class="footer-logo">
+  401:                         <img src="images/LOGO.png" alt="ARBE Logo">
+  402                          <h3>آربه</h3>
+
+css/style.css:
+  255  
+  256: .logo {
+  257      display: flex;
+
+  261  
+  262: .logo img {
+  263      width: 50px;
+
+  266  
+  267: .logo span {
+  268      font-size: 1.5rem;
+
+  870  
+  871: .footer-logo {
+  872      display: flex;
+
+  877  
+  878: .footer-logo img {
+  879      width: 50px;
+
+  882  
+  883: .footer-logo h3 {
+  884      color: var(--white);
