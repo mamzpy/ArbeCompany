@@ -562,6 +562,180 @@ p {
 }
 
 /* Hero Content */
+/* =========================
+   Hero Section - Animated
+========================= */
+.hero-animated {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(212, 165, 116, 0.15) 0%, transparent 70%);
+}
+
+/* Flour Particles */
+.flour-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    font-size: 60px;
+    opacity: 0;
+    animation: explode 3s ease-out forwards, float 4s ease-in-out 3s infinite;
+}
+
+/* Central Flour Package */
+.flour-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: floatCenter 6s ease-in-out infinite;
+}
+
+.flour-icon {
+    width: 200px;
+    height: 250px;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+}
+
+.flour-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(212, 165, 116, 0.4) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes floatCenter {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+/* Particle Positions and Animations */
+.bread { 
+    top: 50%; left: 50%;
+    animation-delay: 0.3s;
+    --x: -200px; --y: -150px; --r: -30deg;
+}
+
+.croissant { 
+    top: 50%; left: 50%;
+    animation-delay: 0.5s;
+    --x: 180px; --y: -120px; --r: 25deg;
+}
+
+.baguette { 
+    top: 50%; left: 50%;
+    animation-delay: 0.7s;
+    --x: -180px; --y: 100px; --r: -45deg;
+}
+
+.pretzel { 
+    top: 50%; left: 50%;
+    animation-delay: 0.9s;
+    --x: 200px; --y: 120px; --r: 35deg;
+}
+
+.cake { 
+    top: 50%; left: 50%;
+    animation-delay: 1.1s;
+    --x: -220px; --y: -50px; --r: -20deg;
+}
+
+.donut { 
+    top: 50%; left: 50%;
+    animation-delay: 1.3s;
+    --x: 220px; --y: -40px; --r: 40deg;
+}
+
+.cookie { 
+    top: 50%; left: 50%;
+    animation-delay: 1.5s;
+    --x: -150px; --y: 150px; --r: -35deg;
+}
+
+.wheat { 
+    top: 50%; left: 50%;
+    animation-delay: 1.7s;
+    --x: 150px; --y: 160px; --r: 15deg;
+}
+
+.wheat2 { 
+    top: 50%; left: 50%;
+    animation-delay: 1.9s;
+    --x: -100px; --y: -180px; --r: -25deg;
+}
+
+.bread2 { 
+    top: 50%; left: 50%;
+    animation-delay: 2.1s;
+    --x: 100px; --y: -170px; --r: 20deg;
+}
+
+/* Explosion Animation */
+@keyframes explode {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(var(--x), var(--y)) scale(1) rotate(var(--r));
+    }
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translate(var(--x), var(--y)) rotate(var(--r)) translateY(0);
+    }
+    50% {
+        transform: translate(var(--x), var(--y)) rotate(var(--r)) translateY(-20px);
+    }
+}
+
+/* Hero Content */
 .hero-content-animated {
     position: relative;
     z-index: 10;
@@ -625,14 +799,13 @@ p {
 
 /* Responsive */
 @media (max-width: 968px) {
-    .flour-package {
-        width: 200px;
-        height: 300px;
+    .flour-icon {
+        width: 150px;
+        height: 200px;
     }
     
-    .flying-item {
-        width: 80px;
-        height: 80px;
+    .particle {
+        font-size: 40px;
     }
     
     .hero-content-animated h1 {
