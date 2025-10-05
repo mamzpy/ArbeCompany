@@ -253,18 +253,18 @@ p {
     align-items: center;
 }
 
-.logo {
+.logo.png {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.logo img {
+.LOGO.png img {
     width: 50px;
     height: 50px;
 }
 
-.logo span {
+.logo.png span {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
@@ -314,450 +314,347 @@ p {
 
 /* =========================
    Hero Section
-========================= */
 /* =========================
-   Hero Section - Animated
+   Hero Section - 3D Rotating Machine
 ========================= */
-.hero-animated {
+.hero-3d {
     position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2c3e50 100%);
+    perspective: 1500px;
 }
 
-.hero-bg {
+.hero-bg-3d {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgba(212, 165, 116, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(212, 165, 116, 0.2) 0%, transparent 60%);
+    animation: bgPulse 8s ease-in-out infinite;
 }
 
-/* Flying Products Container */
-.flying-products {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+@keyframes bgPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
 }
 
-/* Flour Package Center */
-.flour-package {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 400px;
-    z-index: 2;
-    animation: floatCenter 6s ease-in-out infinite;
-}
-
-.flour-package img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
-}
-
-.flour-glow {
+/* Flour Machine Container */
+.flour-machine-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(212, 165, 116, 0.3) 0%, transparent 70%);
-    animation: pulse 3s ease-in-out infinite;
+    z-index: 2;
 }
 
-@keyframes floatCenter {
-    0%, 100% {
-        transform: translate(-50%, -50%) translateY(0);
-    }
-    50% {
-        transform: translate(-50%, -50%) translateY(-20px);
-    }
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 0.5;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        opacity: 0.8;
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-}
-
-/* Flying Items */
-.flying-item {
+/* 3D Flour Machine */
+.flour-machine {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    opacity: 0;
-    animation-fill-mode: forwards;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    animation: rotateMachine 20s linear infinite;
 }
 
-.flying-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+@keyframes rotateMachine {
+    0% { transform: translate(-50%, -50%) rotateY(0deg) rotateX(5deg); }
+    100% { transform: translate(-50%, -50%) rotateY(360deg) rotateX(5deg); }
 }
 
-/* Individual Flying Animations */
-.bread-1 {
-    top: 15%;
-    left: 20%;
-    animation: flyOut1 2s ease-out 0.5s forwards, float 4s ease-in-out 2.5s infinite;
-}
-
-.bread-2 {
-    top: 25%;
-    right: 15%;
-    animation: flyOut2 2s ease-out 0.7s forwards, float 4s ease-in-out 2.7s infinite;
-}
-
-.pastry-1 {
-    top: 60%;
-    left: 15%;
-    animation: flyOut3 2s ease-out 0.9s forwards, float 4s ease-in-out 2.9s infinite;
-}
-
-.pastry-2 {
-    top: 65%;
-    right: 20%;
-    animation: flyOut4 2s ease-out 1.1s forwards, float 4s ease-in-out 3.1s infinite;
-}
-
-.croissant {
-    top: 40%;
-    left: 10%;
-    animation: flyOut5 2s ease-out 1.3s forwards, float 4s ease-in-out 3.3s infinite;
-}
-
-.donut {
-    top: 35%;
-    right: 8%;
-    animation: flyOut6 2s ease-out 1.5s forwards, float 4s ease-in-out 3.5s infinite;
-}
-
-.baguette {
-    top: 80%;
-    left: 25%;
-    animation: flyOut7 2s ease-out 1.7s forwards, float 4s ease-in-out 3.7s infinite;
-}
-
-.wheat-1 {
-    top: 75%;
-    right: 30%;
-    animation: flyOut8 2s ease-out 1.9s forwards, float 4s ease-in-out 3.9s infinite;
-}
-
-/* Fly Out Animations */
-@keyframes flyOut1 {
-    from {
-        opacity: 0;
-        transform: translate(0, 0) scale(0.3) rotate(0deg);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-100px, -80px) scale(1) rotate(-15deg);
-    }
-}
-
-@keyframes flyOut2 {
-    from {
-        opacity: 0;
-        transform: translate(0, 0) scale(0.3) rotate(0deg);
-    }
-    to {
-        opacity: 1;
-        transform: translate(100px, -60px) scale(1) rotate(15deg);
-    }
-}
-
-@keyframes flyOut3 {
-    from {
-        opacity: 0;
-        transform: translate(0, 0) scale(0.3) rotate(0deg);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-80px, 40px) scale(1) rotate(-20deg);
-    }
-}
-
-@keyframes flyOut4 {
-    from {
-        opacity: 0;
-        transform: translate(0, 0) scale(0.3) rotate(0deg);
-    }
-    to {
-        opacity: 1;
-        transform: translate(120px, 50px) scale(1) rotate(25deg);
-    }
-}
-
-@keyframes flyOut5 {
-    from {
-        opacity: 0;
-        transform: translate(0, 0) scale(0.3) rotate(0deg);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-120px, -20px) scale(1) rotate(-10deg);
-    }
-}
-
-@keyframes flyOut6 {
-    from {
-        opacity: 0;
-        transform: translate(0, 0) scale(0.3) rotate(0deg);
-    }
-    to {
-        opacity: 1;
-        transform: translate(140px, -30px) scale(1) rotate(20deg);
-    }
-}
-
-@keyframes flyOut7 {
-    from {
-        opacity: 0;
-        transform: translate(0, 0) scale(0.3) rotate(0deg);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-60px, 70px) scale(1) rotate(-25deg);
-    }
-}
-
-@keyframes flyOut8 {
-    from {
-        opacity: 0;
-        transform: translate(0, 0) scale(0.3) rotate(0deg);
-    }
-    to {
-        opacity: 1;
-        transform: translate(80px, 60px) scale(1) rotate(10deg);
-    }
-}
-
-/* Floating Animation */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0) rotate(var(--rotate));
-    }
-    50% {
-        transform: translateY(-20px) rotate(var(--rotate));
-    }
-}
-
-/* Hero Content */
-/* =========================
-   Hero Section - Animated
-========================= */
-.hero-animated {
+/* 3D Flour Sack */
+.flour-sack {
     position: relative;
-    height: 100vh;
+    width: 200px;
+    height: 280px;
+    transform-style: preserve-3d;
+    animation: floatSack 4s ease-in-out infinite;
+}
+
+@keyframes floatSack {
+    0%, 100% { transform: translateY(0) translateZ(0); }
+    50% { transform: translateY(-20px) translateZ(20px); }
+}
+
+/* Sack Faces */
+.sack-front, .sack-back, .sack-left, 
+.sack-right, .sack-top, .sack-bottom {
+    position: absolute;
+    background: linear-gradient(135deg, #e8d4b8 0%, #d4a574 100%);
+    border: 2px solid #c59563;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.sack-front {
+    width: 200px;
+    height: 280px;
+    transform: translateZ(50px);
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
 }
 
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(212, 165, 116, 0.15) 0%, transparent 70%);
-}
-
-/* Flour Particles */
-.flour-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.particle {
-    position: absolute;
-    font-size: 60px;
-    opacity: 0;
-    animation: explode 3s ease-out forwards, float 4s ease-in-out 3s infinite;
-}
-
-/* Central Flour Package */
-.flour-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    animation: floatCenter 6s ease-in-out infinite;
-}
-
-.flour-icon {
+.sack-back {
     width: 200px;
-    height: 250px;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+    height: 280px;
+    transform: translateZ(-50px) rotateY(180deg);
+    background: linear-gradient(135deg, #c59563 0%, #b08556 100%);
 }
 
-.flour-glow {
+.sack-left {
+    width: 100px;
+    height: 280px;
+    transform: rotateY(-90deg) translateZ(50px);
+    background: linear-gradient(135deg, #d4a574 0%, #c59563 100%);
+}
+
+.sack-right {
+    width: 100px;
+    height: 280px;
+    transform: rotateY(90deg) translateZ(150px);
+    background: linear-gradient(135deg, #d4a574 0%, #c59563 100%);
+}
+
+.sack-top {
+    width: 200px;
+    height: 100px;
+    transform: rotateX(90deg) translateZ(140px);
+    background: linear-gradient(135deg, #c59563 0%, #b08556 100%);
+}
+
+.sack-bottom {
+    width: 200px;
+    height: 100px;
+    transform: rotateX(-90deg) translateZ(140px);
+    background: linear-gradient(135deg, #b08556 0%, #9d7449 100%);
+}
+
+/* Sack Label */
+.sack-label {
+    text-align: center;
+    color: #1a2332;
+    padding: 20px;
+}
+
+.sack-label h3 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #1a2332;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.sack-label p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.sack-logo {
+    font-size: 3rem;
+    animation: spinLogo 3s linear infinite;
+}
+
+@keyframes spinLogo {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Machine Glow */
+.machine-glow {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: radial-gradient(circle, rgba(212, 165, 116, 0.4) 0%, transparent 70%);
-    animation: pulse 3s ease-in-out infinite;
+    animation: glowPulse 3s ease-in-out infinite;
     z-index: -1;
 }
 
-@keyframes floatCenter {
-    0%, 100% {
-        transform: translate(-50%, -50%) translateY(0);
-    }
-    50% {
-        transform: translate(-50%, -50%) translateY(-20px);
-    }
-}
-
-@keyframes pulse {
+@keyframes glowPulse {
     0%, 100% {
         opacity: 0.6;
         transform: translate(-50%, -50%) scale(1);
     }
     50% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.3);
     }
 }
 
-/* Particle Positions and Animations */
-.bread { 
-    top: 50%; left: 50%;
-    animation-delay: 0.3s;
-    --x: -200px; --y: -150px; --r: -30deg;
+/* Products Stream */
+.products-stream {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
-.croissant { 
-    top: 50%; left: 50%;
-    animation-delay: 0.5s;
-    --x: 180px; --y: -120px; --r: 25deg;
+.product-stream {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
-.baguette { 
-    top: 50%; left: 50%;
-    animation-delay: 0.7s;
-    --x: -180px; --y: 100px; --r: -45deg;
+/* Stream Animations */
+.stream-right {
+    animation: streamOutRight 3s ease-out infinite;
 }
 
-.pretzel { 
-    top: 50%; left: 50%;
-    animation-delay: 0.9s;
-    --x: 200px; --y: 120px; --r: 35deg;
+.stream-left {
+    animation: streamOutLeft 3s ease-out infinite;
 }
 
-.cake { 
-    top: 50%; left: 50%;
-    animation-delay: 1.1s;
-    --x: -220px; --y: -50px; --r: -20deg;
+.stream-top {
+    animation: streamOutTop 3s ease-out infinite;
 }
 
-.donut { 
-    top: 50%; left: 50%;
-    animation-delay: 1.3s;
-    --x: 220px; --y: -40px; --r: 40deg;
+.stream-product {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    animation: productFly 3s ease-out infinite;
+    animation-delay: var(--delay);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 }
 
-.cookie { 
-    top: 50%; left: 50%;
-    animation-delay: 1.5s;
-    --x: -150px; --y: 150px; --r: -35deg;
-}
-
-.wheat { 
-    top: 50%; left: 50%;
-    animation-delay: 1.7s;
-    --x: 150px; --y: 160px; --r: 15deg;
-}
-
-.wheat2 { 
-    top: 50%; left: 50%;
-    animation-delay: 1.9s;
-    --x: -100px; --y: -180px; --r: -25deg;
-}
-
-.bread2 { 
-    top: 50%; left: 50%;
-    animation-delay: 2.1s;
-    --x: 100px; --y: -170px; --r: 20deg;
-}
-
-/* Explosion Animation */
-@keyframes explode {
+@keyframes productFly {
     0% {
         opacity: 0;
         transform: translate(0, 0) scale(0.3) rotate(0deg);
     }
-    30% {
+    20% {
         opacity: 1;
     }
     100% {
-        opacity: 1;
-        transform: translate(var(--x), var(--y)) scale(1) rotate(var(--r));
+        opacity: 0;
+        transform: translate(var(--x, 300px), var(--y, -200px)) scale(1.2) rotate(var(--r, 360deg));
     }
 }
 
-/* Floating Animation */
-@keyframes float {
-    0%, 100% {
-        transform: translate(var(--x), var(--y)) rotate(var(--r)) translateY(0);
+.stream-right .stream-product {
+    --x: 400px;
+    --y: -100px;
+    --r: 180deg;
+}
+
+.stream-left .stream-product {
+    --x: -400px;
+    --y: -80px;
+    --r: -180deg;
+}
+
+.stream-top .stream-product {
+    --x: 0px;
+    --y: -350px;
+    --r: 90deg;
+}
+
+/* Flour Dust Particles */
+.flour-dust {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.dust-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: dustFloat 4s ease-in-out infinite;
+}
+
+.dust-particle:nth-child(1) {
+    top: 40%;
+    left: 45%;
+    animation-delay: 0s;
+}
+
+.dust-particle:nth-child(2) {
+    top: 50%;
+    left: 55%;
+    animation-delay: 0.5s;
+}
+
+.dust-particle:nth-child(3) {
+    top: 45%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.dust-particle:nth-child(4) {
+    top: 55%;
+    left: 48%;
+    animation-delay: 1.5s;
+}
+
+.dust-particle:nth-child(5) {
+    top: 48%;
+    left: 52%;
+    animation-delay: 2s;
+}
+
+.dust-particle:nth-child(6) {
+    top: 52%;
+    left: 46%;
+    animation-delay: 2.5s;
+}
+
+@keyframes dustFloat {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(1);
     }
     50% {
-        transform: translate(var(--x), var(--y)) rotate(var(--r)) translateY(-20px);
+        opacity: 0.8;
+        transform: translate(calc(var(--x, 50px)), calc(var(--y, -100px))) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(var(--x, 100px)), calc(var(--y, -200px))) scale(0.5);
     }
 }
 
 /* Hero Content */
-.hero-content-animated {
+.hero-content-3d {
     position: relative;
     z-index: 10;
     text-align: center;
     color: var(--white);
     padding: 0 20px;
+    margin-top: 250px;
 }
 
-.hero-content-animated h1 {
+.hero-content-3d h1 {
     color: var(--white);
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
 }
 
-.hero-content-animated p {
+.hero-content-3d p {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.95);
     margin-bottom: 2.5rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero-buttons {
@@ -799,20 +696,38 @@ p {
 
 /* Responsive */
 @media (max-width: 968px) {
-    .flour-icon {
+    .flour-machine-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .flour-sack {
         width: 150px;
-        height: 200px;
+        height: 210px;
     }
     
-    .particle {
-        font-size: 40px;
+    .sack-front, .sack-back {
+        width: 150px;
+        height: 210px;
     }
     
-    .hero-content-animated h1 {
+    .sack-label h3 {
         font-size: 2rem;
     }
     
-    .hero-content-animated p {
+    .stream-product {
+        font-size: 35px;
+    }
+    
+    .hero-content-3d {
+        margin-top: 200px;
+    }
+    
+    .hero-content-3d h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content-3d p {
         font-size: 1rem;
     }
 }
@@ -1041,19 +956,19 @@ p {
     margin-bottom: 40px;
 }
 
-.footer-logo {
+.footer-logo.png {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
 }
 
-.footer-logo img {
+.footer-logo.png img {
     width: 50px;
     height: 50px;
 }
 
-.footer-logo h3 {
+.footer-logo.png h3 {
     color: var(--white);
     font-size: 1.5rem;
 }

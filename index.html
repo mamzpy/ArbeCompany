@@ -21,8 +21,8 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-content">
-                <div class="logo">
-                    <img src="images/LOGO.png" alt="ARBE Logo">
+                <div class="logo.png">
+                    <img src="images/LOGO.PNG.png" alt="ARBE LOGO.PNG">
                     <span>آربه</span>
                 </div>
                 
@@ -44,39 +44,75 @@
     </nav>
 
     <!-- Hero Section -->
-<!-- Hero Section -->
-    <section class="hero-animated">
-        <div class="hero-bg"></div>
+<!-- Hero Section - 3D Rotating Flour Machine -->
+    <section class="hero-3d">
+        <div class="hero-bg-3d"></div>
         
-        <!-- Animated Particles -->
-        <div class="flour-particles">
-            <div class="particle bread">🍞</div>
-            <div class="particle croissant">🥐</div>
-            <div class="particle baguette">🥖</div>
-            <div class="particle pretzel">🥨</div>
-            <div class="particle cake">🎂</div>
-            <div class="particle donut">🍩</div>
-            <div class="particle cookie">🍪</div>
-            <div class="particle wheat">🌾</div>
-            <div class="particle wheat2">🌾</div>
-            <div class="particle bread2">🍞</div>
-        </div>
-        
-        <!-- Central Flour Icon -->
-        <div class="flour-center">
-            <div class="flour-icon">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="20" y="10" width="60" height="80" rx="5" fill="#d4a574" opacity="0.9"/>
-                    <rect x="25" y="15" width="50" height="70" rx="3" fill="#f5e6d3"/>
-                    <text x="50" y="55" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a2332">ARBE</text>
-                    <text x="50" y="70" font-size="8" text-anchor="middle" fill="#d4a574">FLOUR</text>
-                </svg>
+        <!-- 3D Rotating Flour Machine -->
+        <div class="flour-machine-container">
+            <div class="flour-machine">
+                <!-- Flour Sack 3D -->
+                <div class="flour-sack">
+                    <div class="sack-front">
+                        <div class="sack-label">
+                            <h3>ARBE</h3>
+                            <p>Premium Flour</p>
+                            <div class="sack-logo">🌾</div>
+                        </div>
+                    </div>
+                    <div class="sack-back"></div>
+                    <div class="sack-left"></div>
+                    <div class="sack-right"></div>
+                    <div class="sack-top"></div>
+                    <div class="sack-bottom"></div>
+                </div>
+                
+                <!-- Rotating Glow Effect -->
+                <div class="machine-glow"></div>
             </div>
-            <div class="flour-glow"></div>
+            
+            <!-- Flying Products Stream -->
+            <div class="products-stream">
+                <!-- Stream 1 - Right Side -->
+                <div class="product-stream stream-right">
+                    <span class="stream-product" style="--delay: 0s">🍞</span>
+                    <span class="stream-product" style="--delay: 0.5s">🥐</span>
+                    <span class="stream-product" style="--delay: 1s">🥖</span>
+                    <span class="stream-product" style="--delay: 1.5s">🥨</span>
+                    <span class="stream-product" style="--delay: 2s">🍞</span>
+                </div>
+                
+                <!-- Stream 2 - Left Side -->
+                <div class="product-stream stream-left">
+                    <span class="stream-product" style="--delay: 0.3s">🎂</span>
+                    <span class="stream-product" style="--delay: 0.8s">🍩</span>
+                    <span class="stream-product" style="--delay: 1.3s">🍪</span>
+                    <span class="stream-product" style="--delay: 1.8s">🧁</span>
+                    <span class="stream-product" style="--delay: 2.3s">🥮</span>
+                </div>
+                
+                <!-- Stream 3 - Top -->
+                <div class="product-stream stream-top">
+                    <span class="stream-product" style="--delay: 0.2s">🥐</span>
+                    <span class="stream-product" style="--delay: 0.9s">🍞</span>
+                    <span class="stream-product" style="--delay: 1.4s">🥖</span>
+                    <span class="stream-product" style="--delay: 1.9s">🥯</span>
+                </div>
+                
+                <!-- Flour Particles -->
+                <div class="flour-dust">
+                    <span class="dust-particle"></span>
+                    <span class="dust-particle"></span>
+                    <span class="dust-particle"></span>
+                    <span class="dust-particle"></span>
+                    <span class="dust-particle"></span>
+                    <span class="dust-particle"></span>
+                </div>
+            </div>
         </div>
         
         <!-- Hero Content -->
-        <div class="hero-content-animated">
+        <div class="hero-content-3d">
             <div class="container">
                 <h1 data-aos="fade-up" data-aos-duration="1000">
                     کیفیت برتر در هر نان
@@ -96,6 +132,7 @@
             <div class="scroll-line"></div>
         </div>
     </section>
+        
     <!-- About Section -->
     <section class="about-intro section-padding">
         <div class="container">
@@ -298,8 +335,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="images/LOGO.png" alt="ARBE Logo">
+                    <div class="footer-logo.png">
+                        <img src="images/LOGO.PNG.png" alt="ARBE LOGO.PNG">
                         <h3>آربه</h3>
                     </div>
                     <p>بهبود دهنده تخصصی نان و آرد</p>
