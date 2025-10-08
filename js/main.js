@@ -450,3 +450,31 @@ document.querySelectorAll('img').forEach(img => {
 // =========================
 console.log('%c🍞 Welcome to ARBE - Bread & Flour Improver', 'color: #d4a574; font-size: 16px; font-weight: bold;');
 console.log('%cWebsite developed with precision and care', 'color: #1a2332; font-size: 12px;');
+// Show/Hide Contact Numbers Button
+const showContactBtn = document.getElementById('showContactBtn');
+const contactNumbers = document.getElementById('contactNumbers');
+
+if (showContactBtn && contactNumbers) {
+    showContactBtn.addEventListener('click', function() {
+        if (contactNumbers.classList.contains('show')) {
+            contactNumbers.classList.remove('show');
+            this.textContent = 'نمایش شماره تماس';
+        } else {
+            contactNumbers.classList.add('show');
+            this.textContent = 'مخفی کردن';
+        }
+    });
+}
+
+// Reveal Phone Numbers in Contact Page
+function revealPhone(id) {
+    const element = document.getElementById(id);
+    const button = event.target;
+    if (element && button) {
+        element.style.display = 'block';
+        button.style.display = 'none';
+    }
+}
+
+// Make revealPhone available globally
+window.revealPhone = revealPhone;
