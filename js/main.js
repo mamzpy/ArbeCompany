@@ -478,3 +478,86 @@ function revealPhone(id) {
 
 // Make revealPhone available globally
 window.revealPhone = revealPhone;
+// ========================================
+// CIRCULAR ORBIT ANIMATION
+// ========================================
+
+// Bakery images array
+const bakeryImages = [
+    'images/baguette.jpg',
+    'images/bread-1.jpg',
+    'images/bread-2.jpg',
+    'images/croissant.jpg',
+    'images/donut.jpg',
+    'images/pastry-1.jpg',
+    'images/pastry-2.jpg',
+    'images/wheat.jpg',
+    'images/flour-package.jpg'
+];
+
+const orbitContainer = document.getElementById('orbitContainer');
+let itemIndex = 0;
+
+// Create orbiting item
+function createOrbitItem() {
+    if (!orbitContainer) return;
+    
+    const item = document.createElement('div');
+    item.className = 'orbit-item';
+    
+    const img = document.createElement('img');
+    img.src = bakeryImages[itemIndex % bakeryImages.length];
+    img.alt = 'Bakery Product';
+    img.onerror = function() {
+        this.style.display = 'none';
+    };
+    
+    item.appendChild(img);
+    
+    // Apply smooth orbit animation with slight variation
+    const duration = 10 + Math.random() * 2; // 10-12 seconds
+    item.style.animation = `smoothOrbit ${duration}s linear forwards`;
+    
+    orbitContainer.appendChild(item);
+    
+    // Remove after animation completes
+    setTimeout(() => {
+        item.remove();
+    }, duration * 1000);
+    
+    itemIndex++;
+}
+
+// Create wave of items (multiple at once)
+function createWave() {
+    // Create 6-8 items at once with slight delays
+    const waveSize = 6 + Math.floor(Math.random() * 3); // 6-8 items
+    
+    for (let i = 0; i < waveSize; i++) {
+        setTimeout(() => {
+            createOrbitItem();
+        }, i * 200); // Small stagger: 200ms between each in the wave
+    }
+}
+
+// Create particles
+function createParticles() {
+    const particlesContainer = document.getElementById('flourParticles');
+    if (!particlesContainer) return;
+    
+    for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Initialize orbit animation
+if (orbitContainer) {
+    createParticles();
+    createWave();
+    setInterval(createWave, 3000);
+}
