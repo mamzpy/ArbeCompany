@@ -561,3 +561,44 @@ if (orbitContainer) {
     createWave();
     setInterval(createWave, 3000);
 }
+// ========================================
+// VIDEO AUTOPLAY FIX
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('.hero-video-bg');
+    
+    if (video) {
+        // Ensure all required attributes
+        video.muted = true;
+        video.playsInline = true;
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
+        
+        // Force play
+        const playPromise = video.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(function() {
+                console.log('✅ Video autoplay successful!');
+            }).catch(function(error) {
+                console.log('⚠️ Autoplay prevented:', error);
+                
+                // Fallback: Play on first user interaction
+                const playOnInteraction = function() {
+                    video.play().then(function() {
+                        console.log('✅ Video playing after user interaction');
+                    });
+                    document.removeEventListener('click', playOnInteraction);
+                    document.removeEventListener('touchstart', playOnInteraction);
+                    document.removeEventListener('scroll', playOnInteraction);
+                };
+                
+                document.addEventListener('click', playOnInteraction);
+                document.addEventListener('touchstart', playOnInteraction);
+                document.addEventListener('scroll', playOnInteraction);
+            });
+        }
+    } else {
+        console.log('❌ Video element not found');
+    }
+});
