@@ -1694,7 +1694,7 @@ p {
     width: 100%;
     height: 100vh;
     min-height: 700px;
-    background: linear-gradient(135deg, #faf8f3 0%, #f0ebe0 100%); /* Light beige/cream */
+    background: linear-gradient(135deg, #d4b896 0%, #c09f76 100%);
     overflow: hidden;
     display: flex;
     align-items: center;
