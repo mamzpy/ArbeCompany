@@ -1821,3 +1821,53 @@ p {
         font-size: 1rem;
     }
 }
+/* ========================================
+   FIX WHITE BACKGROUNDS - CONSISTENT THEME
+   ======================================== */
+
+/* Global background for all sections */
+body {
+    background: #f8f9fa;
+}
+
+/* Fix all light/white sections */
+.section-padding:not(.bg-dark):not(.bg-primary) {
+    background: #f8f9fa !important;
+    color: #1e2837 !important;
+}
+
+.bg-light {
+    background: #f8f9fa !important;
+    color: #1e2837 !important;
+}
+
+/* Ensure text is readable */
+.section-padding h1,
+.section-padding h2,
+.section-padding h3,
+.section-padding h4,
+.section-padding p,
+.section-padding li {
+    color: #1e2837 !important;
+}
+
+/* White sections with proper text color */
+.about-intro,
+.products-overview,
+.why-choose {
+    background: white !important;
+    color: #1e2837 !important;
+}
+
+.about-intro *,
+.products-overview *,
+.why-choose * {
+    color: #1e2837 !important;
+}
+
+/* Dark sections stay dark */
+.bg-dark,
+.bg-dark * {
+    background: #1e2837 !important;
+    color: white !important;
+}
