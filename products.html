@@ -1,205 +1,69 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<!doctype html>
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محصولات - آربه</title>
-    <meta name="description" content="محصولات تخصصی بهبود دهنده نان و آرد آربه">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>محصولات — آربه</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- copy same header as index (keeps consistency) -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="ARBE Logo">
+        <h1>آربه</h1>
+      </div>
+      <button class="mobile-toggle" aria-label="باز کردن منو">☰</button>
+      <nav class="nav" aria-label="منوی اصلی">
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="products.html">محصولات</a></li>
+          <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="contact.html">تماس با ما</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="navbar scrolled" id="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <img src="images/logo.png" alt="ARBE Logo" onerror="this.style.display='none'">
-                    <span>آربه</span>
-                </div>
-                
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">خانه</a></li>
-                    <li><a href="products.html" class="active">محصولات</a></li>
-                    <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
-                    <li><a href="about.html">درباره ما</a></li>
-                    <li><a href="contact.html">تماس با ما</a></li>
-                </ul>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">فهرست محصولات</div>
 
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+        <div class="products-grid">
+          <!-- Example product card, duplicate/modify as needed -->
+          <article class="card">
+            <img class="icon" src="images/bread-1.jpg" alt="">
+            <h3>PVI 7 — حرفه‌ای</h3>
+            <p>فرمولاریون برای نان‌های صنعتی با افزایش حجم و بافت مطلوب.</p>
+            <p style="margin-top:12px;"><a class="btn btn-secondary" href="products.html#pvi7">مشاهده جزئیات</a></p>
+          </article>
+
+          <article class="card">
+            <img class="icon" src="images/bread-2.jpg" alt="">
+            <h3>VI 7 — استاندارد</h3>
+            <p>راهکار استاندارد برای تولیدکنندگانی که به کیفیت ثابت نیاز دارند.</p>
+          </article>
+
+          <article class="card">
+            <img class="icon" src="images/past.jpg" alt="">
+            <h3>MNSI 7 — اقتصادی</h3>
+            <p>گزینه اقتصادی برای کسب‌وکارهایی که به صرفه‌جویی هزینه اهمیت می‌دهند.</p>
+          </article>
         </div>
-    </nav>
 
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content" data-aos="fade-up">
-                <h1>محصولات ما</h1>
-                <p>راهکارهای تخصصی برای هر نیاز در صنعت نانوایی</p>
-            </div>
-        </div>
+      </div>
     </section>
+  </main>
 
-    <section class="section-padding">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-label">تنوع محصولات</span>
-                <h2>برای هر آرد، راه‌حل مناسب</h2>
-                <p class="intro-text">
-                    هر آرد ویژگی‌های خاص خود را دارد. محصولات آربه با فرمولاسیون‌های متنوع و تخصصی، پاسخگوی 
-                    نیازهای مختلف تولیدکنندگان نان و محصولات نانوایی است.
-                </p>
-            </div>
-        </div>
-    </section>
+  <footer>
+    <div class="container footer-inner">
+      <div>© ۱۴۰۳ آربه</div>
+    </div>
+  </footer>
 
-    <section id="voluminous" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-label">سری حجم دهنده</span>
-                <h2>بهبود دهنده‌های حجم‌دهنده و تقویت کننده</h2>
-                <p>مخصوص آردهای فانتزی و محصولات نانوایی</p>
-            </div>
-
-            <div class="product-detail" data-aos="fade-up">
-                <div class="product-badge">PVI 7</div>
-                <h3>Professional Voluminous Improver</h3>
-                <h4>بهبود دهنده حرفه‌ای حجم‌دهنده و تقویت کننده ویژه آرد نول</h4>
-                <p>
-                    PVI 7 یک ترکیب تخصصی و به‌روز از بهبود دهنده‌های تقویت که به طور ویژه برای ارتقای 
-                    عملکرد و حجم‌دهی آردهای مورد استفاده در محصولات فانتزی، قنادی فرموله شده است.
-                </p>
-                <div class="product-features-box">
-                    <h5>ویژگی‌های کلیدی:</h5>
-                    <ul>
-                        <li>افزایش جذب آب و بهبود خواص رطوبتی خمیر</li>
-                        <li>بهینه‌سازی خمیری و ساختاری</li>
-                        <li>ایجاد بافت حجیم و یکنواخت</li>
-                        <li>بهبود کیفیت فرآورده‌های نانوایی</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="product-detail" data-aos="fade-up">
-                <div class="product-badge">VI 7</div>
-                <h3>Voluminous Improver</h3>
-                <h4>بهبود دهنده حجم‌دهنده ویژه آرد نول</h4>
-                <p>
-                    VI 7 یک بهبود دهنده مؤثر و تخصصی برای افزایش حجم در انواع نان‌ها و محصولات نانوایی است.
-                </p>
-                <div class="product-features-box">
-                    <h5>مزایا:</h5>
-                    <ul>
-                        <li>بهینه‌سازی فرآیند تخمیر</li>
-                        <li>ارتقای ویژگی‌های رئولوژیکی خمیر</li>
-                        <li>بهبود ساختار حجم نهایی محصول</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="product-detail" data-aos="fade-up">
-                <div class="product-badge">MNSI 7</div>
-                <h3>MN Super Improver</h3>
-                <h4>بهبود دهنده و تقویت کننده حجم‌دهنده اقتصادی آرد نول</h4>
-                <p>
-                    MNSI 7 یک بهبود دهنده چندمنظوره و کارآمد برای استفاده در آردهای فانتزی، قنادی و شیرینی‌پزی.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="strengthener" class="section-padding">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-label">سری تقویت کننده</span>
-                <h2>بهبود دهنده‌های نان و آرد سنتی</h2>
-            </div>
-
-            <div class="product-detail" data-aos="fade-up">
-                <div class="product-badge">BI 7</div>
-                <h3>Basic Improver</h3>
-                <h4>تقویت کننده پایه آرد خبازی</h4>
-                <p>این محصولات برای بهبود عملکرد آردهای با کیفیت متوسط فرموله شده‌اند.</p>
-            </div>
-
-            <div class="product-detail" data-aos="fade-up">
-                <div class="product-badge">PI 7</div>
-                <h3>Plus Improver</h3>
-                <h4>تقویت کننده پیشرفته آرد خبازی</h4>
-                <p>نسخه پیشرفته‌تر با قدرت تقویت بالاتر.</p>
-            </div>
-
-            <div class="product-detail" data-aos="fade-up">
-                <div class="product-badge-group">
-                    <span class="product-badge">S 7</span>
-                    <span class="product-badge">S 7++</span>
-                </div>
-                <h3>Super Improver Series</h3>
-                <h4>تقویت کننده ویژه آرد خبازی</h4>
-                <p>برای اصلاح ویژگی‌های آرد حاصل از گندم‌های آسیب‌دیده.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="economic" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-label">سری اقتصادی</span>
-                <h2>بهبود دهنده‌های اقتصادی</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-6" data-aos="fade-up">
-                    <div class="economic-card">
-                        <div class="product-badge">E 1</div>
-                        <h3>Economic Improver 1</h3>
-                        <p>گزینه اقتصادی برای نانوایی‌های سنتی</p>
-                    </div>
-                </div>
-                <div class="col-6" data-aos="fade-up">
-                    <div class="economic-card">
-                        <div class="product-badge">E 2</div>
-                        <h3>Economic Improver 2</h3>
-                        <p>عملکرد بهتر با قیمت مناسب</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="ARBE" onerror="this.style.display='none'">
-                        <h3>آربه</h3>
-                    </div>
-                    <p>بهبود دهنده تخصصی نان و آرد</p>
-                </div>
-                <div class="footer-col">
-                    <h4>دسترسی سریع</h4>
-                    <ul>
-                        <li><a href="index.html">خانه</a></li>
-                        <li><a href="products.html">محصولات</a></li>
-                        <li><a href="about.html">درباره ما</a></li>
-                        <li><a href="contact.html">تماس</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; ۱۴۰۳ آربه</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

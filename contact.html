@@ -1,139 +1,63 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<!doctype html>
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تماس با ما - آربه</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تماس با ما — آربه</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar scrolled" id="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <img src="images/logo.png" alt="ARBE" onerror="this.style.display='none'">
-                    <span>آربه</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">خانه</a></li>
-                    <li><a href="products.html">محصولات</a></li>
-                    <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
-                    <li><a href="about.html">درباره ما</a></li>
-                    <li><a href="contact.html" class="active">تماس با ما</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="ARBE Logo">
+        <h1>آربه</h1>
+      </div>
+      <button class="mobile-toggle" aria-label="باز کردن منو">☰</button>
+      <nav class="nav" aria-label="منوی اصلی">
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="products.html">محصولات</a></li>
+          <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="contact.html">تماس با ما</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content" data-aos="fade-up">
-                <h1>تماس با ما</h1>
-                <p>ما آماده پاسخگویی به سوالات شما هستیم</p>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">تماس با ما</div>
+
+        <div class="contact-card" style="flex-direction:column;align-items:flex-start;">
+          <div>
+            <p><strong class="kv">موبایل:</strong> ۰۹۱۱۳۱۰۸۹۱۹</p>
+            <p><strong class="kv">تلفن:</strong> ۰۱۳۳۲۸۲۱۹۷۳</p>
+            <p><strong class="kv">ایمیل:</strong> Lotusimprover@gmail.com</p>
+            <p><strong class="kv">آدرس:</strong> رشت، گیلان، خیابان چمران</p>
+          </div>
+
+          <form action="#" method="post" style="width:100%;margin-top:12px;">
+            <div style="display:flex;gap:8px;flex-direction:column;">
+              <input name="name" type="text" placeholder="نام شما" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;">
+              <input name="email" type="email" placeholder="ایمیل" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;">
+              <textarea name="message" rows="5" placeholder="پیام شما" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;"></textarea>
+              <button class="btn btn-primary" type="submit" style="align-self:flex-start;">ارسال پیام</button>
             </div>
+          </form>
         </div>
+      </div>
     </section>
+  </main>
 
-    <section class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-6" data-aos="fade-right">
-                    <div class="contact-info-section">
-                        <h2>اطلاعات تماس</h2>
-                        <p>برای دریافت اطلاعات بیشتر با ما در ارتباط باشید.</p>
-                        <div class="contact-methods">
-                            <div class="contact-method-card">
-                                <div class="method-icon">📱</div>
-                                <div class="method-content">
-                                    <h3>موبایل</h3>
-                                    <button class="reveal-btn" onclick="revealPhone('mobile')">نمایش شماره</button>
-                                    <a href="tel:+989113108919" id="mobile" style="display:none">۰۹۱۱۳۱۰۸۹۱۹</a>
-                                </div>
-                            </div>
-                            <div class="contact-method-card">
-                                <div class="method-icon">☎️</div>
-                                <div class="method-content">
-                                    <h3>تلفن دفتر</h3>
-                                    <button class="reveal-btn" onclick="revealPhone('office')">نمایش شماره</button>
-                                    <a href="tel:+981332821973" id="office" style="display:none">۰۱۳۳۲۸۲۱۹۷۳</a>
-                                </div>
-                            </div>
-                            <div class="contact-method-card">
-                                <div class="method-icon">✉️</div>
-                                <div class="method-content">
-                                    <h3>ایمیل</h3>
-                                    <a href="mailto:Lotusimprover@gmail.com">Lotusimprover@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="contact-method-card">
-                                <div class="method-icon">📍</div>
-                                <div class="method-content">
-                                    <h3>آدرس</h3>
-                                    <p>رشت، گیلان، خیابان چمران</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6" data-aos="fade-left">
-                    <div class="contact-form-wrapper">
-                        <h2>فرم تماس</h2>
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <label>نام و نام خانوادگی</label>
-                                <input type="text" id="name" required>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>ایمیل</label>
-                                    <input type="email" id="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>شماره تماس</label>
-                                    <input type="tel" id="phone" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>پیام</label>
-                                <textarea id="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-full">ارسال پیام</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer>
+    <div class="container footer-inner">
+      <div>© ۱۴۰۳ آربه</div>
+    </div>
+  </footer>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="ARBE" onerror="this.style.display='none'">
-                        <h3>آربه</h3>
-                    </div>
-                    <p>بهبود دهنده تخصصی نان و آرد</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; ۱۴۰۳ آربه</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        function revealPhone(id) {
-            document.getElementById(id).style.display = 'block';
-            event.target.style.display = 'none';
-        }
-    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
