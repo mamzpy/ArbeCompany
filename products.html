@@ -1,69 +1,471 @@
-<!doctype html>
-<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>محصولات — آربه</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محصولات - آربه</title>
+    <meta name="description" content="محصولات تخصصی بهبود دهنده نان و آرد آربه - از بهبود دهنده های حجم دهنده تا تقویت کننده های پایه">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/logo.png" alt="Arbe logo">
-        <h1>آربه</h1>
-      </div>
-      <button class="mobile-toggle" aria-controls="main-nav">☰</button>
-      <nav class="nav" id="main-nav">
-        <ul>
-          <li><a href="index.html">خانه</a></li>
-          <li><a href="products.html">محصولات</a></li>
-          <li><a href="laboratory.html">آزمایشگاه</a></li>
-          <li><a href="about.html">درباره ما</a></li>
-          <li><a href="contact.html">تماس</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <div class="section-title">فهرست کامل محصولات</div>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="ARBE Logo">
+                    <span>آربه</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="products.html" class="active">محصولات</a></li>
+                    <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
 
-        <div class="products-grid">
-          <!-- Repeat product card pattern -->
-          <article class="card">
-            <img class="icon" src="images/bread-1.jpg" alt="">
-            <h3>PVI 7 — حرفه‌ای</h3>
-            <p>فرمول ویژه برای افزایش حجم، بافت نرم و پایداری بیشتر در تولید صنعتی.</p>
-          </article>
-
-          <article class="card">
-            <img class="icon" src="images/bread-2.jpg" alt="">
-            <h3>VI 7 — استاندارد</h3>
-            <p>محصولی با عملکرد ثابت و مناسب برای خطوطی که به کیفیت پایدار نیاز دارند.</p>
-          </article>
-
-          <article class="card">
-            <img class="icon" src="images/past3.jpg" alt="">
-            <h3>MNSI 7 — اقتصادی</h3>
-            <p>بهینه‌شده برای کاهش هزینه‌های تولید بدون افت قابل توجه در کیفیت.</p>
-          </article>
-
-          <!-- add more cards as needed -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <h1>محصولات ما</h1>
+                <p>راهکارهای تخصصی برای هر نیاز در صنعت نانوایی</p>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-small">© ۱۴۰۳ آربه</div>
-    </div>
-  </footer>
+    <!-- Products Intro -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-label">تنوع محصولات</span>
+                <h2>برای هر آرد، راه‌حل مناسب</h2>
+                <p class="intro-text">
+                    هر آرد ویژگی‌های خاص خود را دارد. محصولات آربه با فرمولاسیون‌های متنوع و تخصصی، پاسخگوی 
+                    نیازهای مختلف تولیدکنندگان نان و محصولات نانوایی است. از آردهای فانتزی تا نان‌های سنتی، 
+                    ما راهکار مناسب برای شما داریم.
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <script src="js/main.js"></script>
+    <!-- Voluminous Improvers Section -->
+    <section id="voluminous" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">سری حجم دهنده</span>
+                <h2>بهبود دهنده‌های حجم‌دهنده و تقویت کننده</h2>
+                <p>مخصوص آردهای فانتزی و محصولات نانوایی</p>
+            </div>
+
+            <!-- PVI 7 -->
+            <div class="product-detail" data-aos="fade-up">
+                <div class="row align-center">
+                    <div class="col-6">
+                        <div class="product-badge">PVI 7</div>
+                        <h3>Professional Voluminous Improver</h3>
+                        <h4>بهبود دهنده حرفه‌ای حجم‌دهنده و تقویت کننده ویژه آرد نول</h4>
+                        <p>
+                            PVI 7 یک ترکیب تخصصی و به‌روز از بهبود دهنده‌های تقویت که به طور ویژه برای ارتقای 
+                            عملکرد و حجم‌دهی آردهای مورد استفاده در محصولات فانتزی، قنادی فرموله شده است.
+                        </p>
+                        <div class="product-features-box">
+                            <h5>ویژگی‌های کلیدی:</h5>
+                            <ul>
+                                <li><strong>افزایش جذب آب:</strong> بهبود خواص رطوبتی خمیر</li>
+                                <li><strong>بهینه‌سازی خمیری و ساختاری:</strong> ایجاد بافت حجیم و یکنواخت</li>
+                                <li><strong>بهبود کیفیت فرآورده‌های نانوایی:</strong> برای پخت بهتر</li>
+                                <li><strong>عملکرد پایدار:</strong> نتایج قابل تکرار در هر دفعه</li>
+                            </ul>
+                        </div>
+                        <div class="product-applications">
+                            <strong>کاربردها:</strong> نان‌های فانتزی، کیک، شیرینی، کلوچه، محصولات قنادی
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="image-wrapper">
+                            <img src="images/product-pvi7.jpg" alt="PVI 7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VI 7 -->
+            <div class="product-detail" data-aos="fade-up" data-aos-delay="100">
+                <div class="row align-center">
+                    <div class="col-6">
+                        <div class="image-wrapper">
+                            <img src="images/product-vi7.jpg" alt="VI 7">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-badge">VI 7</div>
+                        <h3>Voluminous Improver</h3>
+                        <h4>بهبود دهنده حجم‌دهنده ویژه آرد نول</h4>
+                        <p>
+                            VI 7 یک بهبود دهنده مؤثر و تخصصی برای افزایش حجم در انواع نان‌ها و محصولات نانوایی است 
+                            که با فرمولاسیونی هدفمند و سازگار با انواع آردهای قنادی طراحی شده است.
+                        </p>
+                        <div class="product-features-box">
+                            <h5>مزایا:</h5>
+                            <ul>
+                                <li>بهینه‌سازی فرآیند تخمیر و ارتقای ویژگی‌های رئولوژیکی خمیر</li>
+                                <li>نقش کلیدی در بهبود ساختار حجم نهایی محصول</li>
+                                <li>افزایش نرمی و حجم محصولات</li>
+                                <li>بهبود ماندگاری نان</li>
+                            </ul>
+                        </div>
+                        <div class="product-applications">
+                            <strong>کاربردها:</strong> نان‌های نرم، تست، باگت فانتزی، محصولات نانوایی نیمه صنعتی
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MNSI 7 -->
+            <div class="product-detail" data-aos="fade-up" data-aos-delay="200">
+                <div class="row align-center">
+                    <div class="col-6">
+                        <div class="product-badge">MNSI 7</div>
+                        <h3>MN Super Improver</h3>
+                        <h4>بهبود دهنده و تقویت کننده حجم‌دهنده اقتصادی آرد نول</h4>
+                        <p>
+                            MNSI 7 یک بهبود دهنده چندمنظوره و کارآمد است که به طور خاص برای استفاده در آردهای 
+                            فانتزی، قنادی و شیرینی‌پزی طراحی شده و در عین حال از نظر اقتصادی گزینه‌ای مقرون 
+                            به‌صرفه برای تولیدکنندگان محسوب می‌شود.
+                        </p>
+                        <div class="product-features-box">
+                            <h5>ویژگی‌ها:</h5>
+                            <ul>
+                                <li><strong>ترکیب متعادل:</strong> از اجزای بهبود دهنده با عملکرد مناسب</li>
+                                <li><strong>بهبود حجم، بافت و کیفیت:</strong> محصولات نهایی قنادی</li>
+                                <li><strong>اقتصادی:</strong> بدون نیاز به هزینه‌های بالا</li>
+                                <li><strong>راندمان بالا:</strong> با دوز مصرف بهینه</li>
+                            </ul>
+                        </div>
+                        <div class="product-applications">
+                            <strong>کاربردها:</strong> تولیدات نیمه صنعتی، نانوایی‌های کوچک و متوسط، قنادی‌ها
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="image-wrapper">
+                            <img src="images/product-mnsi7.jpg" alt="MNSI 7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengthener Section -->
+    <section id="strengthener" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">سری تقویت کننده</span>
+                <h2>بهبود دهنده‌های نان و آرد سنتی</h2>
+                <p>برای آردهای با کیفیت متوسط و نان‌های سنتی</p>
+            </div>
+
+            <!-- BI 7 -->
+            <div class="product-detail" data-aos="fade-up">
+                <div class="row align-center">
+                    <div class="col-6">
+                        <div class="image-wrapper">
+                            <img src="images/product-bi7.jpg" alt="BI 7">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-badge">BI 7</div>
+                        <h3>Basic Improver</h3>
+                        <h4>تقویت کننده پایه آرد خبازی</h4>
+                        <p>
+                            این محصولات به طور اختصاصی برای بهبود عملکرد آردهای با کیفیت متوسط فرموله شده‌اند. 
+                            ترکیبات فعال موجود در BI 7 با تقویت ساختار شبکه گلوتنی، به پایداری و حفظ پیوندهای 
+                            دی‌سولفیدی در پروتئین‌های گلوتن کمک می‌کند.
+                        </p>
+                        <div class="product-features-box">
+                            <h5>مزایا:</h5>
+                            <ul>
+                                <li>تقویت شبکه گلوتنی</li>
+                                <li>افزایش ظرفیت جذب آب</li>
+                                <li>بهبود فرآیند خمیرگیری</li>
+                                <li>ساختار پایدار و قابل کار</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PI 7 -->
+            <div class="product-detail" data-aos="fade-up" data-aos-delay="100">
+                <div class="row align-center">
+                    <div class="col-6">
+                        <div class="product-badge">PI 7</div>
+                        <h3>Plus Improver</h3>
+                        <h4>تقویت کننده پایه آرد خبازی</h4>
+                        <p>
+                            نسخه پیشرفته‌تر BI 7 با قدرت تقویت بیشتر برای آردهایی که نیاز به بهبود بیشتر دارند. 
+                            PI 7 با فرمولاسیون غنی‌تر، عملکرد بهتری در شرایط تولید سخت‌تر ارائه می‌دهد.
+                        </p>
+                        <div class="product-features-box">
+                            <h5>ویژگی‌ها:</h5>
+                            <ul>
+                                <li>قدرت تقویت بالاتر نسبت به BI 7</li>
+                                <li>مناسب برای آردهای ضعیف‌تر</li>
+                                <li>تحمل بیشتر در برابر فرآیندهای طولانی</li>
+                                <li>بهبود کیفیت نهایی نان</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="image-wrapper">
+                            <img src="images/product-pi7.jpg" alt="PI 7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- S 7 Series -->
+            <div class="product-detail" data-aos="fade-up" data-aos-delay="200">
+                <div class="row align-center">
+                    <div class="col-6">
+                        <div class="image-wrapper">
+                            <img src="images/product-s7.jpg" alt="S 7">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-badge-group">
+                            <span class="product-badge">S 7</span>
+                            <span class="product-badge">S 7++</span>
+                        </div>
+                        <h3>Super Improver Series</h3>
+                        <h4>تقویت کننده ویژه آرد خبازی</h4>
+                        <p>
+                            محصولات خانواده S 7 به طور تخصصی برای اصلاح ویژگی‌های آرد حاصل از گندم‌های آسیب‌دیده 
+                            نظیر گندم‌های سنزده طراحی و فرموله شده‌اند. این محصولات با بهره‌گیری از ترکیبات فعال 
+                            آنزیمی و تقویت کننده‌های ساختاری قادرند تأثیرات منفی ناشی از فعالیت آنزیم آلفا-آمیلاز 
+                            اضافی و آسیب‌دیدگی پروتئین گلوتنی را به طور مؤثر مهار نمایند.
+                        </p>
+                        <div class="product-features-box">
+                            <h5>کاربردها:</h5>
+                            <ul>
+                                <li><strong>S 7:</strong> برای آردهای با آسیب متوسط</li>
+                                <li><strong>S 7++:</strong> برای آردهای با آسیب شدید (گندم سنزده)</li>
+                                <li>تثبیت ساختار گلوتن</li>
+                                <li>کاهش چسبندگی خمیر</li>
+                                <li>کنترل رفتار خمیر در مرحله تخمیر و پخت</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economic Series -->
+    <section id="economic" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">سری اقتصادی</span>
+                <h2>بهبود دهنده‌های اقتصادی</h2>
+                <p>گزینه هوشمند برای تولیدکنندگان</p>
+            </div>
+
+            <div class="economic-intro" data-aos="fade-up">
+                <p class="lead-text">
+                    محصولات سری EI به عنوان گزینه‌ای اقتصادی برای بهبود کیفیت آرد در تولید نان‌های سنتی طراحی 
+                    شده‌اند. این محصولات با وجود قیمت مناسب، عملکرد قابل قبولی در تقویت ساختار خمیر، بهبود بافت 
+                    نان و افزایش ماندگاری محصول نهایی ارائه می‌دهند.
+                </p>
+            </div>
+
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-6" data-aos="fade-up">
+                    <div class="economic-card">
+                        <div class="product-badge">E 1</div>
+                        <h3>Economic Improver 1</h3>
+                        <h4>تقویت کننده اقتصادی</h4>
+                        <p>
+                            نسخه پایه از بهبود دهنده‌های اقتصادی. مناسب برای نانوایی‌های سنتی و تولیدات روزمره 
+                            با دوز مصرف بالاتر اما هزینه کمتر.
+                        </p>
+                        <ul class="simple-list">
+                            <li>دوز مصرف: بالاتر از سایر محصولات</li>
+                            <li>مناسب برای: نان‌های سنتی، لواش، سنگک</li>
+                            <li>هزینه: کمترین هزینه در کیلوگرم آرد</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="economic-card">
+                        <div class="product-badge">E 2</div>
+                        <h3>Economic Improver 2</h3>
+                        <h4>تقویت کننده اقتصادی</h4>
+                        <p>
+                            نسخه بهبود یافته با عملکرد بهتر. فرمولاسیون EI 1 و EI 2 با دُز مصرف بالاتر نسبت به 
+                            سایر تقویت کننده‌ها، امکان به‌کارگیری در شرایط تولید با محدودیت بودجه را فراهم می‌سازد.
+                        </p>
+                        <ul class="simple-list">
+                            <li>دوز مصرف: متوسط</li>
+                            <li>عملکرد: بهتر از E1</li>
+                            <li>مناسب برای: واحدهای تولیدی متوسط</li>
+                            <li>تعادل: بین کیفیت و هزینه تولید</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialty Product -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-label">محصول ویژه</span>
+                <h2>پرمیکس آهن و اسید فولیک</h2>
+            </div>
+
+            <div class="specialty-product" data-aos="fade-up">
+                <div class="row align-center">
+                    <div class="col-6">
+                        <div class="image-wrapper">
+                            <img src="images/iron-premix.jpg" alt="Iron Premix">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h3>Iron Premix with Folic Acid</h3>
+                        <h4>پرمیکس آهن و اسید فولیک</h4>
+                        <p>
+                            محصولی از بهبود دهنده لوتوس برای غنی‌سازی آرد و افزایش ارزش غذایی نان. این محصول 
+                            حاوی آهن و اسید فولیک است که برای پیشگیری از کم‌خونی و بهبود سلامت عمومی ضروری هستند.
+                        </p>
+                        <div class="product-info-box">
+                            <h5>مشخصات:</h5>
+                            <ul>
+                                <li><strong>ترکیبات:</strong> نشاسته ذرت، سولفات آهن، اسید فولیک</li>
+                                <li><strong>وزن خالص:</strong> ۱۰ کیلوگرم</li>
+                                <li><strong>تاریخ انقضا:</strong> ۱۸ ماه پس از تولید</li>
+                                <li><strong>مزایا:</strong> افزایش ارزش غذایی، پیشگیری از کم‌خونی</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-box">
+                            <p><strong>نکته:</strong> استفاده از این محصول در راستای سیاست‌های بهداشتی کشور 
+                            برای غنی‌سازی آرد توصیه می‌شود.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Formulation CTA -->
+    <section class="section-padding bg-primary">
+        <div class="container text-center">
+            <div data-aos="zoom-in">
+                <h2 class="text-light">آرد شما نیاز به فرمولاسیون خاص دارد؟</h2>
+                <p class="text-light" style="max-width: 700px; margin: 0 auto 30px;">
+                    ما در آربه امکان طراحی فرمولاسیون اختصاصی متناسب با ویژگی‌های خاص آرد شما را فراهم آورده‌ایم. 
+                    نمونه آرد خود را برای ما ارسال کنید تا در آزمایشگاه تخصصی ما مورد ارزیابی قرار گیرد.
+                </p>
+                <a href="laboratory.html" class="btn btn-light">اطلاعات بیشتر درباره خدمات آزمایشگاهی</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="ARBE Logo">
+                        <h3>آربه</h3>
+                    </div>
+                    <p>بهبود دهنده تخصصی نان و آرد</p>
+                    <p class="tagline">Since 1400</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>دسترسی سریع</h4>
+                    <ul>
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="products.html">محصولات</a></li>
+                        <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>محصولات</h4>
+                    <ul>
+                        <li><a href="#voluminous">بهبود دهنده حجم‌دهنده</a></li>
+                        <li><a href="#strengthener">تقویت کننده پایه</a></li>
+                        <li><a href="#economic">اقتصادی</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>تماس با ما</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            <a href="tel:+989113108919">۰۹۱۱۳۱۰۸۹۱۹</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                            </svg>
+                            <a href="tel:+981332821973">۰۱۳۳۲۸۲۱۹۷۳</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <a href="mailto:Lotusimprover@gmail.com">Lotusimprover@gmail.com</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>رشت، گیلان، خیابان چمران</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; ۱۴۰۳ آربه. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>

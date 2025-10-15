@@ -1,43 +1,399 @@
-<!doctype html>
-<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>درباره ما — آربه</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما - آربه</title>
+    <meta name="description" content="آربه - شرکت بهبود دهنده نان لوتوس، تولید کننده بهبود دهنده های تخصصی نان و آرد از سال 1400">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container header-inner">
-      <div class="brand"><img src="images/logo.png" alt="Arbe logo"><h1>آربه</h1></div>
-      <button class="mobile-toggle" aria-controls="main-nav">☰</button>
-      <nav class="nav" id="main-nav">
-        <ul>
-          <li><a href="index.html">خانه</a></li>
-          <li><a href="products.html">محصولات</a></li>
-          <li><a href="laboratory.html">آزمایشگاه</a></li>
-          <li><a href="about.html">درباره ما</a></li>
-          <li><a href="contact.html">تماس</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <div class="section-title">درباره آربه</div>
-        <p style="color:var(--muted);max-width:900px;margin:0 auto;text-align:center">شرکت آربه با ترکیب تجربه فنی و تحقیق و توسعه، بهبود دهنده‌های آرد را برای کاربردهای صنعتی طراحی می‌کند. مأموریت ما کمک به تولیدکنندگان برای ارتقای کیفیت محصول و کاهش ضایعات است.</p>
-      </div>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="ARBE Logo">
+                    <span>آربه</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="products.html">محصولات</a></li>
+                    <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
+                    <li><a href="about.html" class="active">درباره ما</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <h1>درباره آربه</h1>
+                <p>انتخابی با دقت و عشق به صنعت نان</p>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-small">© ۱۴۰۳ آربه</div>
-    </div>
-  </footer>
-  <script src="js/main.js"></script>
+    <!-- Company Story -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-6" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <img src="images/company-story.jpg" alt="داستان آربه">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="col-6" data-aos="fade-left">
+                    <span class="section-label">داستان ما</span>
+                    <h2>آغازی برای کیفیت بهتر</h2>
+                    <p>
+                        شرکت بهبود دهنده نان لوتوس با نام تجاری <strong>آربه</strong>، در سال ۱۴۰۰ با همکاری 
+                        تیمی از مشاوران متخصص در حوزه آرد و نان تأسیس شد. ما با ایمان به این که کیفیت نان از 
+                        کیفیت آرد آغاز می‌شود، مسیر خود را با هدف ارتقای استانداردهای صنعت نانوایی ایران آغاز کردیم.
+                    </p>
+                    <p>
+                        هدف اصلی این مجموعه، ارتقای کیفیت آرد و محصولات نانوایی از طریق استفاده از مواد اولیه 
+                        منطبق با بالاترین استانداردهای غذایی <strong>FDA</strong> است. ما معتقدیم که هر نان 
+                        باید با بهترین کیفیت و بالاترین استانداردهای بهداشتی تولید شود.
+                    </p>
+                    <div class="highlight-text">
+                        <p>
+                            <strong>"سلامت مصرف کنندگان همواره یکی از ارزش‌های بنیادین ماست و تولید محصولات 
+                            باکیفیت، تعهد همیشگی ماست."</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-label">ماموریت و چشم‌انداز</span>
+                <h2>آینده‌ای روشن برای صنعت نان</h2>
+            </div>
+
+            <div class="mission-vision-grid">
+                <div class="mv-card" data-aos="fade-up">
+                    <div class="mv-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3>ماموریت ما</h3>
+                    <p>
+                        ارتقای کیفیت آرد و محصولات نانوایی در ایران از طریق ارائه بهبود دهنده‌های تخصصی و 
+                        استاندارد. ما متعهد به ارائه محصولاتی هستیم که نه تنها کیفیت نهایی نان را بهبود می‌بخشند، 
+                        بلکه سلامت مصرف کنندگان را نیز تضمین کنند.
+                    </p>
+                </div>
+
+                <div class="mv-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mv-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3>چشم‌انداز ما</h3>
+                    <p>
+                        تبدیل شدن به پیشرو صنعت بهبود دهنده‌های نان و آرد در منطقه، با تکیه بر نوآوری مستمر، 
+                        تحقیق و توسعه، و ارائه راهکارهای کاربردی برای هر نیاز در صنعت نانوایی. ما به دنبال 
+                        ایجاد استانداردی جدید در کیفیت و اعتماد هستیم.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-label">ارزش‌های ما</span>
+                <h2>اصولی که ما را شکل می‌دهند</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="value-number">01</div>
+                    <h3>کیفیت بی‌چون و چرا</h3>
+                    <p>
+                        هیچ راه میانبری برای کیفیت وجود ندارد. ما از بهترین مواد اولیه استفاده می‌کنیم و 
+                        محصولات خود را با استانداردهای FDA منطبق می‌سازیم.
+                    </p>
+                </div>
+
+                <div class="value-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="value-number">02</div>
+                    <h3>نوآوری مستمر</h3>
+                    <p>
+                        با تکیه بر تحقیق و توسعه مستمر، در مسیر نوآوری حرکت می‌کنیم و راهکارهای جدید برای 
+                        چالش‌های صنعت ارائه می‌دهیم.
+                    </p>
+                </div>
+
+                <div class="value-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="value-number">03</div>
+                    <h3>مشتری‌مداری</h3>
+                    <p>
+                        نیاز مشتریان ما در اولویت است. ما با ارائه خدمات مشاوره تخصصی و فرمولاسیون اختصاصی، 
+                        در کنار شما هستیم.
+                    </p>
+                </div>
+
+                <div class="value-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="value-number">04</div>
+                    <h3>تعهد به سلامت</h3>
+                    <p>
+                        سلامت مصرف کنندگان خط قرمز ماست. تمام محصولات ما با رعایت کامل استانداردهای بهداشتی 
+                        تولید می‌شوند.
+                    </p>
+                </div>
+
+                <div class="value-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="value-number">05</div>
+                    <h3>شفافیت و اعتماد</h3>
+                    <p>
+                        ما با شفافیت کامل در مورد ترکیبات و فرآیندهای تولید عمل می‌کنیم و به اعتماد شما 
+                        ارزش می‌گذاریم.
+                    </p>
+                </div>
+
+                <div class="value-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="value-number">06</div>
+                    <h3>مسئولیت اجتماعی</h3>
+                    <p>
+                        ما مسئولیت خود در قبال جامعه و محیط زیست را درک می‌کنیم و در راستای توسعه پایدار 
+                        حرکت می‌کنیم.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-label light">مزیت‌های رقابتی</span>
+                <h2 class="text-light">چرا آربه را انتخاب کنید؟</h2>
+            </div>
+
+            <div class="advantages-grid">
+                <div class="advantage-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-light">آزمایشگاه تخصصی</h3>
+                    <p class="text-light">
+                        امکان آزمایش و ارزیابی دقیق آرد شما و طراحی فرمولاسیون اختصاصی
+                    </p>
+                </div>
+
+                <div class="advantage-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                            <path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-light">تیم متخصص</h3>
+                    <p class="text-light">
+                        مشاوران با تجربه و متخصص در زمینه علوم غذایی و صنعت نان
+                    </p>
+                </div>
+
+                <div class="advantage-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-light">استانداردهای بالا</h3>
+                    <p class="text-light">
+                        تطابق کامل با استانداردهای FDA و بهداشتی بین‌المللی
+                    </p>
+                </div>
+
+                <div class="advantage-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-light">نتایج سریع</h3>
+                    <p class="text-light">
+                        بهبود قابل مشاهده در کیفیت، بافت و حجم محصولات نهایی
+                    </p>
+                </div>
+
+                <div class="advantage-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-light">قیمت منصفانه</h3>
+                    <p class="text-light">
+                        محصولات با طیف قیمتی متنوع برای هر بودجه و نیاز
+                    </p>
+                </div>
+
+                <div class="advantage-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-light">پشتیبانی مستمر</h3>
+                    <p class="text-light">
+                        خدمات پس از فروش و مشاوره فنی در تمام مراحل
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="commitment-box" data-aos="zoom-in">
+                <div class="commitment-content">
+                    <h2>تعهد ما به کیفیت و نوآوری</h2>
+                    <p>
+                        ما در آربه با تکیه بر تحقیق و توسعه مستمر، در مسیر نوآوری و ارائه راهکارهای کاربردی 
+                        برای بهبود کیفیت، بافت و عملکرد نان حرکت می‌کنیم. هر محصول ما نتیجه ساعت‌ها تحقیق، 
+                        آزمایش و بهینه‌سازی است.
+                    </p>
+                    <p>
+                        ما در کنار شما هستیم تا بهترین نتایج را در تولید نان و آرد با کیفیت‌تر و سالم‌تر تجربه کنیم.
+                    </p>
+                    <div class="commitment-signature">
+                        <strong>تیم آربه</strong>
+                        <span>Since 1400</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-primary">
+        <div class="container text-center">
+            <div data-aos="zoom-in">
+                <h2 class="text-light">بیایید با هم آینده‌ای بهتر بسازیم</h2>
+                <p class="text-light" style="max-width: 700px; margin: 0 auto 30px;">
+                    آماده همکاری با شما هستیم. برای کسب اطلاعات بیشتر درباره محصولات و خدمات ما، 
+                    با ما در تماس باشید.
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-light">تماس با ما</a>
+                    <a href="products.html" class="btn btn-outline-light">مشاهده محصولات</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="ARBE Logo">
+                        <h3>آربه</h3>
+                    </div>
+                    <p>بهبود دهنده تخصصی نان و آرد</p>
+                    <p class="tagline">Since 1400</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>دسترسی سریع</h4>
+                    <ul>
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="products.html">محصولات</a></li>
+                        <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>محصولات</h4>
+                    <ul>
+                        <li><a href="products.html#voluminous">بهبود دهنده حجم‌دهنده</a></li>
+                        <li><a href="products.html#strengthener">تقویت کننده پایه</a></li>
+                        <li><a href="products.html#economic">اقتصادی</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>تماس با ما</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            <a href="tel:+989113108919">۰۹۱۱۳۱۰۸۹۱۹</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                            </svg>
+                            <a href="tel:+981332821973">۰۱۳۳۲۸۲۱۹۷۳</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <a href="mailto:Lotusimprover@gmail.com">Lotusimprover@gmail.com</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>رشت، گیلان، خیابان چمران</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; ۱۴۰۳ آربه. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
