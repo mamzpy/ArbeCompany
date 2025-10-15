@@ -722,96 +722,42 @@ p {
     box-shadow: var(--shadow-lg);
 }
 
+/* ========================================
+   PRODUCT ICON IMAGES
+   ======================================== */
+
 .product-icon {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 25px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.icon-shape {
-    width: 40px;
-    height: 40px;
+.product-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
 }
 
-.icon-shape.premium {
-    background: linear-gradient(135deg, #d4a574, #c59563);
+.product-card:hover .product-icon {
+    transform: scale(1.1);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
 }
 
-.icon-shape.strengthen {
-    background: linear-gradient(135deg, #1a2332, #2c3e50);
-}
-
-.icon-shape.economic {
-    background: linear-gradient(135deg, #6c757d, #495057);
-}
-
-.product-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.product-features {
-    margin: 25px 0;
-    padding-right: 20px;
-}
-
-.product-features li {
-    position: relative;
-    padding: 8px 0;
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
-
-.product-features li::before {
-    content: '◆';
-    position: absolute;
-    right: -20px;
-    color: var(--secondary-color);
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
-}
-
-.feature-item {
-    text-align: center;
-}
-
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 25px;
-    background: linear-gradient(135deg, var(--secondary-color), #c59563);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    transition: var(--transition);
-}
-
-.feature-item:hover .feature-icon {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.feature-icon svg {
-    width: 40px;
-    height: 40px;
-}
-
-.feature-item h3 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
+/* Responsive - smaller on mobile */
+@media (max-width: 768px) {
+    .product-icon {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 /* =========================
