@@ -4,24 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>محصولات — آربه</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- copy same header as index (keeps consistency) -->
   <header>
     <div class="container header-inner">
-      <div class="logo">
-        <img src="images/logo.png" alt="ARBE Logo">
+      <div class="brand">
+        <img src="images/logo.png" alt="Arbe logo">
         <h1>آربه</h1>
       </div>
-      <button class="mobile-toggle" aria-label="باز کردن منو">☰</button>
-      <nav class="nav" aria-label="منوی اصلی">
+      <button class="mobile-toggle" aria-controls="main-nav">☰</button>
+      <nav class="nav" id="main-nav">
         <ul>
           <li><a href="index.html">خانه</a></li>
           <li><a href="products.html">محصولات</a></li>
-          <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
+          <li><a href="laboratory.html">آزمایشگاه</a></li>
           <li><a href="about.html">درباره ما</a></li>
-          <li><a href="contact.html">تماس با ما</a></li>
+          <li><a href="contact.html">تماس</a></li>
         </ul>
       </nav>
     </div>
@@ -30,37 +30,37 @@
   <main>
     <section class="section">
       <div class="container">
-        <div class="section-title">فهرست محصولات</div>
+        <div class="section-title">فهرست کامل محصولات</div>
 
         <div class="products-grid">
-          <!-- Example product card, duplicate/modify as needed -->
+          <!-- Repeat product card pattern -->
           <article class="card">
             <img class="icon" src="images/bread-1.jpg" alt="">
             <h3>PVI 7 — حرفه‌ای</h3>
-            <p>فرمولاریون برای نان‌های صنعتی با افزایش حجم و بافت مطلوب.</p>
-            <p style="margin-top:12px;"><a class="btn btn-secondary" href="products.html#pvi7">مشاهده جزئیات</a></p>
+            <p>فرمول ویژه برای افزایش حجم، بافت نرم و پایداری بیشتر در تولید صنعتی.</p>
           </article>
 
           <article class="card">
             <img class="icon" src="images/bread-2.jpg" alt="">
             <h3>VI 7 — استاندارد</h3>
-            <p>راهکار استاندارد برای تولیدکنندگانی که به کیفیت ثابت نیاز دارند.</p>
+            <p>محصولی با عملکرد ثابت و مناسب برای خطوطی که به کیفیت پایدار نیاز دارند.</p>
           </article>
 
           <article class="card">
-            <img class="icon" src="images/past.jpg" alt="">
+            <img class="icon" src="images/past3.jpg" alt="">
             <h3>MNSI 7 — اقتصادی</h3>
-            <p>گزینه اقتصادی برای کسب‌وکارهایی که به صرفه‌جویی هزینه اهمیت می‌دهند.</p>
+            <p>بهینه‌شده برای کاهش هزینه‌های تولید بدون افت قابل توجه در کیفیت.</p>
           </article>
-        </div>
 
+          <!-- add more cards as needed -->
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-inner">
-      <div>© ۱۴۰۳ آربه</div>
+      <div class="footer-small">© ۱۴۰۳ آربه</div>
     </div>
   </footer>
 

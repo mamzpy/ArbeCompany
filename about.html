@@ -3,24 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>تماس با ما — آربه</title>
+  <title>درباره ما — آربه</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <div class="container header-inner">
-      <div class="logo">
-        <img src="images/logo.png" alt="ARBE Logo">
-        <h1>آربه</h1>
-      </div>
-      <button class="mobile-toggle" aria-label="باز کردن منو">☰</button>
-      <nav class="nav" aria-label="منوی اصلی">
+      <div class="brand"><img src="images/logo.png" alt="Arbe logo"><h1>آربه</h1></div>
+      <button class="mobile-toggle" aria-controls="main-nav">☰</button>
+      <nav class="nav" id="main-nav">
         <ul>
           <li><a href="index.html">خانه</a></li>
           <li><a href="products.html">محصولات</a></li>
-          <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
+          <li><a href="laboratory.html">آزمایشگاه</a></li>
           <li><a href="about.html">درباره ما</a></li>
-          <li><a href="contact.html">تماس با ما</a></li>
+          <li><a href="contact.html">تماس</a></li>
         </ul>
       </nav>
     </div>
@@ -29,35 +27,17 @@
   <main>
     <section class="section">
       <div class="container">
-        <div class="section-title">تماس با ما</div>
-
-        <div class="contact-card" style="flex-direction:column;align-items:flex-start;">
-          <div>
-            <p><strong class="kv">موبایل:</strong> ۰۹۱۱۳۱۰۸۹۱۹</p>
-            <p><strong class="kv">تلفن:</strong> ۰۱۳۳۲۸۲۱۹۷۳</p>
-            <p><strong class="kv">ایمیل:</strong> Lotusimprover@gmail.com</p>
-            <p><strong class="kv">آدرس:</strong> رشت، گیلان، خیابان چمران</p>
-          </div>
-
-          <form action="#" method="post" style="width:100%;margin-top:12px;">
-            <div style="display:flex;gap:8px;flex-direction:column;">
-              <input name="name" type="text" placeholder="نام شما" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;">
-              <input name="email" type="email" placeholder="ایمیل" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;">
-              <textarea name="message" rows="5" placeholder="پیام شما" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;"></textarea>
-              <button class="btn btn-primary" type="submit" style="align-self:flex-start;">ارسال پیام</button>
-            </div>
-          </form>
-        </div>
+        <div class="section-title">درباره آربه</div>
+        <p style="color:var(--muted);max-width:900px;margin:0 auto;text-align:center">شرکت آربه با ترکیب تجربه فنی و تحقیق و توسعه، بهبود دهنده‌های آرد را برای کاربردهای صنعتی طراحی می‌کند. مأموریت ما کمک به تولیدکنندگان برای ارتقای کیفیت محصول و کاهش ضایعات است.</p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-inner">
-      <div>© ۱۴۰۳ آربه</div>
+      <div class="footer-small">© ۱۴۰۳ آربه</div>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
