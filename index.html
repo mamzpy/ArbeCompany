@@ -1,342 +1,834 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آربه - بهبود دهنده نان و آرد</title>
-    <meta name="description" content="آربه - تولید کننده بهبود دهنده های تخصصی نان و آرد با استانداردهای بین المللی">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>ARBE - Lotus Bread and Flour Improver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #1a2744;
+            --gold: #d4a574;
+            --light-blue: #2d3e5f;
+            --cream: #f5f5f0;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--navy);
+            color: var(--white);
+            overflow-x: hidden;
+            transition: all 0.3s ease;
+        }
+
+        body[dir="rtl"] {
+            font-family: 'Tahoma', 'Segoe UI', sans-serif;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 39, 68, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .lang-switch {
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .lang-switch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(212, 165, 116, 0.5);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section with Particles */
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        #particleCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.5);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* About Section */
+        #about {
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--navy) 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 165, 116, 0.3);
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Products Section */
+        #products {
+            background: var(--navy);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: var(--light-blue);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+        }
+
+        .product-card h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .product-tag {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        /* Quality Section */
+        #quality {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--light-blue) 100%);
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .quality-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .quality-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .quality-item h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--light-blue);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--gold);
+            min-width: 30px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
+            border: 2px solid rgba(212, 165, 116, 0.3);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .submit-btn {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 165, 116, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f1824;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--gold);
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(26, 39, 68, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        /* Hidden class for language switching */
+        .hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
-
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <img src="images/logo.png" alt="ARBE Logo">
-                    <span>آربه</span>
-                </div>
-                
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="active">خانه</a></li>
-                    <li><a href="products.html">محصولات</a></li>
-                    <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
-                    <li><a href="about.html">درباره ما</a></li>
-                    <li><a href="contact.html">تماس با ما</a></li>
-                </ul>
-
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+    <nav>
+        <div class="nav-container">
+            <a href="#hero" class="logo">ARBE</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="lang-en">About</a><a href="#about" class="lang-fa hidden">درباره ما</a></li>
+                <li><a href="#products" class="lang-en">Products</a><a href="#products" class="lang-fa hidden">محصولات</a></li>
+                <li><a href="#quality" class="lang-en">Quality</a><a href="#quality" class="lang-fa hidden">کیفیت</a></li>
+                <li><a href="#contact" class="lang-en">Contact</a><a href="#contact" class="lang-fa hidden">تماس</a></li>
+                <li><button class="lang-switch" onclick="toggleLanguage()"><span class="lang-en">فارسی</span><span class="lang-fa hidden">English</span></button></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
+    <section id="hero">
+        <canvas id="particleCanvas"></canvas>
         <div class="hero-content">
-            <div class="container">
-                <h1 data-aos="fade-up" data-aos-duration="1000">
-                    کیفیت برتر در هر نان
-                </h1>
-                <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                    بهبود دهنده های تخصصی آرد و نانوایی با استانداردهای جهانی FDA
-                </p>
-                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                    <a href="products.html" class="btn btn-primary">مشاهده محصولات</a>
-                    <a href="contact.html" class="btn btn-outline">تماس با ما</a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <span>اسکرول کنید</span>
-            <div class="scroll-line"></div>
+            <h1 class="lang-en">ARBE Flour Improver</h1>
+            <h1 class="lang-fa hidden">بهبود دهنده آرد آربه</h1>
+            <p class="lang-en">Premium flour improvement solutions for professional bakers since 2021</p>
+            <p class="lang-fa hidden">راه‌حل‌های حرفه‌ای بهبود آرد برای نانوایان از سال ۱۴۰۰</p>
+            <a href="#products" class="cta-button lang-en">Explore Products</a>
+            <a href="#products" class="cta-button lang-fa hidden">مشاهده محصولات</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-intro section-padding">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-6" data-aos="fade-left">
-                    <div class="image-wrapper">
-                        <img src="images/wheat-field.jpg" alt="مزرعه گندم">
-                        <div class="image-overlay"></div>
-                    </div>
+    <section id="about">
+        <h2 class="lang-en">About ARBE</h2>
+        <h2 class="lang-fa hidden">درباره آربه</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="lang-en">
+                    Lotus Bread and Flour Improver Company, trading as ARBE, was established in 2021 by a team of specialized consultants in the flour and bread industry. Our primary goal is to elevate the quality of flour and bakery products through the use of premium raw materials that comply with FDA food standards.
+                </p>
+                <p class="lang-fa hidden">
+                    شرکت بهبود دهنده نان لوتوس با نام تجاری آربه، در سال ۱۴۰۰ با همکاری تیمی از مشاوران متخصص در حوزه آرد و نان تاسیس شد. هدف اصلی ما ارتقای کیفیت آرد و محصولات نانوایی از طریق استفاده از مواد اولیه مرغوب مطابق با استانداردهای غذایی FDA است.
+                </p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <h3 class="lang-en">2021</h3>
+                    <h3 class="lang-fa hidden">۱۴۰۰</h3>
+                    <p class="lang-en">Founded</p>
+                    <p class="lang-fa hidden">سال تاسیس</p>
                 </div>
-                <div class="col-6" data-aos="fade-right">
-                    <div class="content-box">
-                        <span class="section-label">درباره آربه</span>
-                        <h2>تخصص ما، کیفیت شما</h2>
-                        <p>
-                            شرکت بهبود دهنده نان لوتوس با نام تجاری آربه، از سال ۱۴۰۰ با همکاری تیمی از مشاوران متخصص در حوزه آرد و نان، فعالیت خود را آغاز کرد. هدف اصلی ما ارتقای کیفیت آرد و محصولات نانوایی از طریق استفاده از مواد اولیه منطبق با بالاترین استانداردهای غذایی FDA است.
-                        </p>
-                        <p>
-                            با تکیه بر تحقیق و توسعه مستمر، ما در مسیر نوآوری و ارائه راهکارهای کاربردی برای بهبود کیفیت، بافت و عملکرد نان حرکت می‌کنیم.
-                        </p>
-                        <a href="about.html" class="btn-link">بیشتر بخوانید ←</a>
-                    </div>
+                <div class="stat-card">
+                    <h3>FDA</h3>
+                    <p class="lang-en">Compliant</p>
+                    <p class="lang-fa hidden">استاندارد</p>
+                </div>
+                <div class="stat-card">
+                    <h3>B2B</h3>
+                    <p class="lang-en">Solutions</p>
+                    <p class="lang-fa hidden">راه‌حل‌ها</p>
+                </div>
+                <div class="stat-card">
+                    <h3>10+</h3>
+                    <p class="lang-en">Products</p>
+                    <p class="lang-fa hidden">محصول</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Overview -->
-    <section class="products-overview section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-label">محصولات ما</span>
-                <h2>راهکارهای تخصصی برای هر نیاز</h2>
-                <p>از آردهای فانتزی تا نان‌های سنتی، محصولات آربه پاسخگوی تمام نیازهای صنعت نانوایی شماست</p>
+    <!-- Products Section -->
+    <section id="products">
+        <h2 class="lang-en">Our Products</h2>
+        <h2 class="lang-fa hidden">محصولات ما</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <h3>PVI 7</h3>
+                <p class="lang-en">Professional Voluminous Improver - Specialized formula for fantasy and confectionery products with optimal fermentation properties.</p>
+                <p class="lang-fa hidden">بهبود دهنده تخصصی و به‌روز برای ارتقای عملکرد آردهای نان، شیرینی و فانتزی با بهبود حجم و بافت.</p>
+                <span class="product-tag lang-en">Professional</span>
+                <span class="product-tag lang-fa hidden">حرفه‌ای</span>
             </div>
 
-            <div class="products-grid">
-                <!-- Product Card 1 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="product-icon">
-                        <img src="images/icon-premium.svg" alt="Premium">
-                    </div>
-                    <h3>بهبود دهنده‌های حجم‌دهنده</h3>
-                    <p>برای آردهای فانتزی و نان‌های نرم با حجم و بافت ایده‌آل</p>
-                    <ul class="product-features">
-                        <li>PVI 7 - حرفه‌ای</li>
-                        <li>VI 7 - استاندارد</li>
-                        <li>MNSI 7 - اقتصادی</li>
-                    </ul>
-                    <a href="products.html#voluminous" class="btn-link">مشاهده جزئیات ←</a>
-                </div>
-
-                <!-- Product Card 2 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="product-icon">
-                        <img src="images/icon-strengthen.svg" alt="Strengthen">
-                    </div>
-                    <h3>تقویت کننده‌های پایه</h3>
-                    <p>برای بهبود عملکرد آردهای با کیفیت متوسط و آسیب‌دیده</p>
-                    <ul class="product-features">
-                        <li>BI 7 - پایه</li>
-                        <li>PI 7 - پیشرفته</li>
-                        <li>S 7 / S 7++ - ویژه</li>
-                    </ul>
-                    <a href="products.html#strengthener" class="btn-link">مشاهده جزئیات ←</a>
-                </div>
-
-                <!-- Product Card 3 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="product-icon">
-                        <img src="images/icon-economic.svg" alt="Economic">
-                    </div>
-                    <h3>بهبود دهنده‌های اقتصادی</h3>
-                    <p>گزینه هوشمند برای تولیدکنندگانی که به دنبال تعادل بین کیفیت و هزینه هستند</p>
-                    <ul class="product-features">
-                        <li>E1 - اقتصادی یک</li>
-                        <li>E2 - اقتصادی دو</li>
-                    </ul>
-                    <a href="products.html#economic" class="btn-link">مشاهده جزئیات ←</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-choose section-padding">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-label">چرا آربه؟</span>
-                <h2>تعهد ما به کیفیت و نوآوری</h2>
+            <div class="product-card">
+                <h3>VI 7</h3>
+                <p class="lang-en">Voluminous Improver - Effective improver for increasing volume in various breads and bakery products.</p>
+                <p class="lang-fa hidden">بهبود دهنده مؤثر و تخصصی برای افزایش حجم در انواع نان‌ها و محصولات نانوایی.</p>
+                <span class="product-tag lang-en">Volume</span>
+                <span class="product-tag lang-fa hidden">حجم دهنده</span>
             </div>
 
-            <div class="features-grid">
-                <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3>استاندارد FDA</h3>
-                    <p>تمام محصولات ما با بالاترین استانداردهای غذایی جهانی منطبق هستند</p>
-                </div>
+            <div class="product-card">
+                <h3>MNSI 7</h3>
+                <p class="lang-en">MN Super Improver - Multi-purpose economic improver for confectionery, fantasy, and bakery products.</p>
+                <p class="lang-fa hidden">بهبود دهنده چندمنظوره و کاربردی برای آردهای فانتزی، قنادی و شیرینی‌پزی.</p>
+                <span class="product-tag lang-en">Economic</span>
+                <span class="product-tag lang-fa hidden">اقتصادی</span>
+            </div>
 
-                <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                        </svg>
-                    </div>
-                    <h3>آزمایشگاه تخصصی</h3>
-                    <p>امکان طراحی فرمولاسیون اختصاصی متناسب با ویژگی‌های آرد شما</p>
-                </div>
+            <div class="product-card">
+                <h3>BI 7</h3>
+                <p class="lang-en">Basic Improver - Foundation strengthener for bakery flour with optimal water absorption.</p>
+                <p class="lang-fa hidden">تقویت کننده پایه آرد خبازی با جذب آب بهینه.</p>
+                <span class="product-tag lang-en">Basic</span>
+                <span class="product-tag lang-fa hidden">پایه</span>
+            </div>
 
-                <div class="feature-item" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                    </div>
-                    <h3>عملکرد بالا</h3>
-                    <p>بهبود چشمگیر در حجم، بافت و ماندگاری محصولات نهایی</p>
-                </div>
+            <div class="product-card">
+                <h3>PI 7</h3>
+                <p class="lang-en">Plus Improver - Enhanced foundation strengthener for bakery flour.</p>
+                <p class="lang-fa hidden">تقویت کننده پایه پیشرفته آرد خبازی.</p>
+                <span class="product-tag lang-en">Plus</span>
+                <span class="product-tag lang-fa hidden">پلاس</span>
+            </div>
 
-                <div class="feature-item" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3>پشتیبانی فنی</h3>
-                    <p>مشاوره و راهنمایی تخصصی در تمام مراحل تولید</p>
-                </div>
+            <div class="product-card">
+                <h3>S 7 / S 7++</h3>
+                <p class="lang-en">Super Improver Series - Specialized for damaged wheat flour repair with enzymatic activity control.</p>
+                <p class="lang-fa hidden">تقویت کننده ویژه برای اصلاح ویژگی‌های آرد حاصل از گندم‌های آسیب‌دیده.</p>
+                <span class="product-tag lang-en">Premium</span>
+                <span class="product-tag lang-fa hidden">ویژه</span>
+            </div>
+
+            <div class="product-card">
+                <h3>E1 / E2</h3>
+                <p class="lang-en">Economic Improvers - Cost-effective solutions for traditional bread production.</p>
+                <p class="lang-fa hidden">تقویت کننده اقتصادی برای بهبود کیفیت آرد در نان‌های سنتی.</p>
+                <span class="product-tag lang-en">Economic</span>
+                <span class="product-tag lang-fa hidden">اقتصادی</span>
+            </div>
+
+            <div class="product-card">
+                <h3 class="lang-en">Iron Premix</h3>
+                <h3 class="lang-fa hidden">پرمیکس آهن</h3>
+                <p class="lang-en">Iron and Folic Acid Premix - Nutritional fortification for flour products.</p>
+                <p class="lang-fa hidden">پرمیکس آهن و اسید فولیک برای غنی‌سازی محصولات آردی.</p>
+                <span class="product-tag lang-en">Fortification</span>
+                <span class="product-tag lang-fa hidden">غنی‌ساز</span>
             </div>
         </div>
     </section>
 
-    <!-- Laboratory Services -->
-    <section class="laboratory-cta section-padding bg-dark">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-6" data-aos="fade-left">
-                    <span class="section-label light">خدمات آزمایشگاهی</span>
-                    <h2 class="text-light">فرمولاسیون اختصاصی برای آرد شما</h2>
-                    <p class="text-light">
-                        هر آرد ویژگی‌های خاص خود را دارد. ما در آربه امکان طراحی فرمولاسیون اختصاصی متناسب با نیاز شما را فراهم کرده‌ایم. نمونه آرد خود را برای ما ارسال کنید تا در آزمایشگاه تخصصی ما مورد ارزیابی و بررسی دقیق قرار گیرد.
-                    </p>
-                    <a href="laboratory.html" class="btn btn-primary">اطلاعات بیشتر</a>
+    <!-- Quality Section -->
+    <section id="quality">
+        <h2 class="lang-en">Quality & Standards</h2>
+        <h2 class="lang-fa hidden">کیفیت و استاندارد</h2>
+        <div class="quality-grid">
+            <div class="quality-item">
+                <div class="quality-icon">✓</div>
+                <h3 class="lang-en">FDA Compliant</h3>
+                <h3 class="lang-fa hidden">استاندارد FDA</h3>
+                <p class="lang-en">All products meet FDA food standards</p>
+                <p class="lang-fa hidden">تمامی محصولات مطابق استانداردهای غذایی FDA</p>
+            </div>
+            <div class="quality-item">
+                <div class="quality-icon">🔬</div>
+                <h3 class="lang-en">Laboratory Tested</h3>
+                <h3 class="lang-fa hidden">آزمایشگاهی</h3>
+                <p class="lang-en">Rigorous quality control and testing</p>
+                <p class="lang-fa hidden">کنترل کیفیت دقیق و آزمایش‌های جامع</p>
+            </div>
+            <div class="quality-item">
+                <div class="quality-icon">🌾</div>
+                <h3 class="lang-en">Premium Ingredients</h3>
+                <h3 class="lang-fa hidden">مواد اولیه مرغوب</h3>
+                <p class="lang-en">Only the finest raw materials</p>
+                <p class="lang-fa hidden">استفاده از بهترین مواد اولیه</p>
+            </div>
+            <div class="quality-item">
+                <div class="quality-icon">🤝</div>
+                <h3 class="lang-en">Expert Support</h3>
+                <h3 class="lang-fa hidden">پشتیبانی متخصص</h3>
+                <p class="lang-en">Technical consultation and after-sales service</p>
+                <p class="lang-fa hidden">مشاوره فنی و خدمات پس از فروش</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="lang-en">Contact Us</h2>
+        <h2 class="lang-fa hidden">تماس با ما</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3 class="lang-en">Address</h3>
+                        <h3 class="lang-fa hidden">آدرس</h3>
+                        <p class="lang-en">Chamran St, Rasht, Guilan, Iran</p>
+                        <p class="lang-fa hidden">خیابان چمران، رشت، گیلان، ایران</p>
+                    </div>
                 </div>
-                <div class="col-6" data-aos="fade-right">
-                    <div class="image-wrapper">
-                        <img src="images/laboratory.jpg" alt="آزمایشگاه">
-                        <div class="image-overlay"></div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h3 class="lang-en">Phone</h3>
+                        <h3 class="lang-fa hidden">تلفن</h3>
+                        <p>(+98) 1332821973</p>
+                        <p>(+98) 9113108919</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h3 class="lang-en">Email</h3>
+                        <h3 class="lang-fa hidden">ایمیل</h3>
+                        <p>Lotusimprover@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+                    <div>
+                        <h3 class="lang-en">Website</h3>
+                        <h3 class="lang-fa hidden">وبسایت</h3>
+                        <p>www.arbecompany.com</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Ingredients Section -->
-    <section class="ingredients section-padding">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-label">مواد اولیه</span>
-                <h2>ترکیبات با کیفیت بالا</h2>
-                <p>استفاده از مواد اولیه مرغوب و استاندارد در تمام محصولات</p>
-            </div>
-
-            <div class="ingredients-grid" data-aos="fade-up" data-aos-delay="200">
-                <div class="ingredient-tag">گلوکز اکسیداز</div>
-                <div class="ingredient-tag">ترانس گلوتامیناز</div>
-                <div class="ingredient-tag">آلفا آمیلاز</div>
-                <div class="ingredient-tag">اسید اسکوربیک</div>
-                <div class="ingredient-tag">اسید سیتریک</div>
-                <div class="ingredient-tag">گام زانتان</div>
-                <div class="ingredient-tag">گام گوار</div>
-                <div class="ingredient-tag">DATEM</div>
-                <div class="ingredient-tag">SSL</div>
-                <div class="ingredient-tag">مونوگلیسرید</div>
-                <div class="ingredient-tag">کربنات کلسیم</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section section-padding bg-primary">
-        <div class="container text-center">
-            <div data-aos="zoom-in">
-                <h2 class="text-light">آماده همکاری با شما هستیم</h2>
-                <p class="text-light">برای دریافت مشاوره تخصصی و اطلاعات بیشتر درباره محصولات، با ما در تماس باشید</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-light">تماس با ما</a>
-                    <a href="tel:+989113108919" class="btn btn-outline-light">۰۹۱۱۳۱۰۸۹۱۹</a>
+            <form class="contact-form" onsubmit="return handleSubmit(event)">
+                <div class="form-group">
+                    <label class="lang-en">Name</label>
+                    <label class="lang-fa hidden">نام</label>
+                    <input type="text" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label class="lang-en">Email</label>
+                    <label class="lang-fa hidden">ایمیل</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="lang-en">Message</label>
+                    <label class="lang-fa hidden">پیام</label>
+                    <textarea rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn lang-en">Send Message</button>
+                <button type="submit" class="submit-btn lang-fa hidden">ارسال پیام</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="ARBE Logo">
-                        <h3>آربه</h3>
-                    </div>
-                    <p>بهبود دهنده تخصصی نان و آرد</p>
-                    <p class="tagline">Since 1400</p>
-                </div>
-
-                <div class="footer-col">
-                    <h4>دسترسی سریع</h4>
-                    <ul>
-                        <li><a href="index.html">خانه</a></li>
-                        <li><a href="products.html">محصولات</a></li>
-                        <li><a href="laboratory.html">خدمات آزمایشگاهی</a></li>
-                        <li><a href="about.html">درباره ما</a></li>
-                        <li><a href="contact.html">تماس با ما</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>محصولات</h4>
-                    <ul>
-                        <li><a href="products.html#voluminous">بهبود دهنده حجم‌دهنده</a></li>
-                        <li><a href="products.html#strengthener">تقویت کننده پایه</a></li>
-                        <li><a href="products.html#economic">اقتصادی</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>تماس با ما</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            <a href="tel:+989113108919">۰۹۱۱۳۱۰۸۹۱۹</a>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-                            </svg>
-                            <a href="tel:+981332821973">۰۱۳۳۲۸۲۱۹۷۳</a>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                            <a href="mailto:Lotusimprover@gmail.com">Lotusimprover@gmail.com</a>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>رشت، گیلان، خیابان چمران</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; ۱۴۰۳ آربه. تمامی حقوق محفوظ است.</p>
-            </div>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/arbecompany" target="_blank">📷</a>
+            <a href="mailto:Lotusimprover@gmail.com">✉️</a>
+            <a href="tel:+989113108919">📞</a>
         </div>
+        <p class="lang-en">&copy; 2024 ARBE - Lotus Bread and Flour Improver. All rights reserved.</p>
+        <p class="lang-fa hidden">© ۱۴۰۳ آربه - بهبود دهنده نان لوتوس. تمامی حقوق محفوظ است.</p>
     </footer>
 
-    <!-- AOS Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
-    <!-- Main JavaScript -->
-    <script src="js/main.js"></script>
+    <script>
+        // Particle Animation
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = 50;
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = centerX;
+                this.y = centerY;
+                this.size = 1;
+                this.maxSize = Math.random() * 4 + 2;
+                this.angle = Math.random() * Math.PI * 2;
+                this.speed = Math.random() * 0.5 + 0.2;
+                this.distance = 0;
+                this.maxDistance = Math.random() * 300 + 200;
+                this.opacity = 1;
+                this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+            }
+
+            update() {
+                this.distance += this.speed;
+                this.angle += this.rotationSpeed;
+                
+                this.x = centerX + Math.cos(this.angle) * this.distance;
+                this.y = centerY + Math.sin(this.angle) * this.distance;
+
+                const progress = this.distance / this.maxDistance;
+                
+                if (progress < 0.3) {
+                    this.size = this.maxSize * (progress / 0.3);
+                } else if (progress > 0.7) {
+                    this.opacity = 1 - ((progress - 0.7) / 0.3);
+                }
+
+                if (this.distance > this.maxDistance) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = '#d4a574';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(26, 39, 68, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Language Toggle
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'fa' : 'en';
+            const html = document.documentElement;
+            
+            if (currentLang === 'fa') {
+                html.setAttribute('lang', 'fa');
+                html.setAttribute('dir', 'rtl');
+                document.querySelectorAll('.lang-en').forEach(el => el.classList.add('hidden'));
+                document.querySelectorAll('.lang-fa').forEach(el => el.classList.remove('hidden'));
+            } else {
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+                document.querySelectorAll('.lang-fa').forEach(el => el.classList.add('hidden'));
+                document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('hidden'));
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Form Submit Handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert(currentLang === 'en' 
+                ? 'Thank you for your message! We will contact you soon.' 
+                : 'از پیام شما متشکریم! به زودی با شما تماس خواهیم گرفت.');
+            event.target.reset();
+            return false;
+        }
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.style.padding = '0.5rem 2rem';
+            } else {
+                nav.style.padding = '1rem 2rem';
+            }
+        });
+    </script>
 </body>
 </html>
