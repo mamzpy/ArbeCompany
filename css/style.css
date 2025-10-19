@@ -193,9 +193,10 @@ a {
     height: 100vh;
     min-height: 600px;
     display: flex;
-    align-items: center;
+    align-items: flex-end; /* CHANGED: Move to bottom */
     justify-content: center;
     overflow: hidden;
+    padding-bottom: 4rem; /* Add space from bottom edge */
 }
 
 .hero-video {
@@ -259,25 +260,24 @@ a {
 }
 
 .hero-glass-card h1 {
-    font-size: 4rem;
+    font-size: 3rem; /* Smaller - was 4rem */
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem; /* Less space */
     color: var(--gold);
     line-height: 1.2;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
+    font-size: 1.1rem; /* Smaller - was 1.3rem */
+    margin-bottom: 1.5rem; /* Less space */
     color: var(--white);
-    line-height: 1.8;
+    line-height: 1.6;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
-
 .cta-button {
     display: inline-block;
     background: var(--gold);
