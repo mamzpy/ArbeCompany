@@ -75,28 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ============================================
-// Hero Image Slider (Rotating Images)
-// ============================================
-let currentSlide = 0;
-const slides = document.querySelectorAll('.hero-slide');
-const totalSlides = slides.length;
-
-function changeSlide() {
-    // Remove active class from current slide
-    slides[currentSlide].classList.remove('active');
-    
-    // Move to next slide
-    currentSlide = (currentSlide + 1) % totalSlides;
-    
-    // Add active class to new slide
-    slides[currentSlide].classList.add('active');
-}
-
-// Change slide every 5 seconds
-if (slides.length > 0) {
-    setInterval(changeSlide, 5000);
-}
 
 // ============================================
 // Navbar Scroll Effect
