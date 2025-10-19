@@ -827,74 +827,44 @@ section {
 /* ============================================
    Footer
    ============================================ */
+/* ============================================
+   Footer - Simplified
+   ============================================ */
 footer {
     background: var(--navy-dark);
-    padding: 3rem 0 1rem;
+    padding: 3rem 0 2rem;
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+.footer-simple {
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 1.5rem;
 }
 
 .footer-logo img {
     height: 60px;
     width: auto;
-    margin-bottom: 1rem;
+    margin: 0 auto;
+    display: block;
 }
 
-.footer-logo p {
+.footer-tagline {
+    font-size: 1.1rem;
     color: var(--text-light);
+    margin-bottom: 1.5rem;
     line-height: 1.8;
-    margin-top: 1rem;
 }
 
-.footer-links h4,
-.footer-contact h4 {
-    color: var(--gold);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 0.8rem;
-}
-
-.footer-links a {
-    color: var(--text-light);
-    transition: all 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--gold);
-    padding-left: 5px;
-}
-
-[dir="rtl"] .footer-links a:hover {
-    padding-left: 0;
-    padding-right: 5px;
-}
-
-.footer-contact p {
-    color: var(--text-light);
-    margin-bottom: 0.5rem;
-}
-
-.footer-bottom {
-    text-align: center;
-    color: var(--text-light);
+.footer-copyright {
     font-size: 0.9rem;
-    padding-top: 1rem;
+    color: var(--text-light);
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(212, 165, 116, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
 }
-
 /* ============================================
    Scroll to Top Button
    ============================================ */
