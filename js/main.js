@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', animateOnScroll);
 // ============================================
 function preloadImages() {
     const images = [
-        'images/flour5.jpg',
+        'images/flour5.png',
         'images/flour4.jpg',
         'images/flour.webp'
     ];
