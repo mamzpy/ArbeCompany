@@ -625,12 +625,12 @@ section {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 40px var(--shadow);
-    background: var(--white);
-    padding: 1rem;
+    background: transparent; /* CHANGE: Remove white */
+    padding: 0; /* CHANGE: Remove padding */
 }
 
 .quality-image img {
-    border-radius: 10px;
+    border-radius: 15px;
     width: 100%;
     height: 100%;
     object-fit: cover;
